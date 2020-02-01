@@ -3,8 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'client-web';
+  private _opened: boolean = false;
+
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+  }
 }
