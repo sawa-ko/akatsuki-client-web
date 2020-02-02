@@ -1,0 +1,52 @@
+{
+  "Pages": {
+    "Welcome": {
+      "button": {
+        "buy": "Buy",
+        "go_to_market": "Go to market",
+        "sign_up": "Sign Up",
+        "status": "Status",
+        "support": "Support"
+      },
+      "description": {
+        "feature_description_1": "Quality tools so you can always get the best results quickly, easily and effectively.",
+        "feature_description_2": "Talk to your coworkers easy and fast with encrypted point-to-point conversations.",
+        "feature_description_3": "Sell ​​or buy any product you want in the store. Don't worry just they can sell certificates. :)",
+        "feature_description_4": "We are a community that we are in both your PC and your mobile with our multi platform applications.",
+        "feature_description_5": "Post content in the social section to say what you think, do surveys and more.",
+        "frequent_question_1_desc_1": "We have backup servers in case one stops working so you can always have the best experience in Akatsuki Project.",
+        "frequent_question_1_desc_2": "You can check how are the status of servers, tools, store and social area at any time from the \"API Status\" page.",
+        "frequent_question_1_desc_3": "Remember that you can help us report any error that the platform has to solve it as soon as possible and always be 100% working.",
+        "frequent_question_2_desc_1": "We try to always keep the store safe from scams and deceptions, so all sellers in Akatsuki Project are identified with a certification badge that is only granted by the administration.",
+        "frequent_question_2_desc_2": "No user without the rank of Seller can sell in the store.",
+        "frequent_question_2_desc_3": "If you find a scammer, do not hesitate to report it to suspend the user of all Akatsuki Project services.",
+        "frequent_question_3_desc_1": "No, Premium membership is optional and you can use Akatsuki Project without No problem or limitation that prevents you from using it normally.",
+        "frequent_question_3_desc_2": "Premium membership has the function of being able to grant exclusive access to characteristics of the platform, as explained above in a table.",
+        "frequent_question_3_desc_3": "Free users are also welcome. :)",
+        "mobile_app_desc_1": "You can download our applications for Android, IOS (Coming soon) and Windows desktop application right here. We try to keep all clients synchronized so you can get the best experience in each of them.",
+        "mobile_app_desc_2": "We have different clients and not only a universal application because for us the native is better, so that each client is made natively, so that some functions may arrive first in the web version for example before in the other clients.",
+        "welcome_desc_1": "Akatsuki Project is a social network for Carder / Binners users who try to sell their products or use Hacking tools with ease and with excellent results.",
+        "welcome_desc_2": "We have a store where you can sell or buy products from certified seller users Akatsuki Project and be able to use your purchased product for the purpose you want.",
+        "welcome_desc_3": "We also have a variety of tools so we can take their lives out of your containers and use them with good results."
+      },
+      "title": {
+        "feature_title_1": "Tools",
+        "feature_title_2": "Social",
+        "feature_title_3": "Marketplace",
+        "feature_title_4": "Multi platform",
+        "feature_title_5": "Community",
+        "features": "Features",
+        "frequent_question_1": "Are the servers stable?",
+        "frequent_question_2": "Is the market safe?",
+        "frequent_question_3": "Is Premium membership necessary?",
+        "frequent_questions": "Frequent questions",
+        "membership_anonymous": "Anonymous",
+        "membership_free": "Member free",
+        "membership_galaxy": "Member Galaxy",
+        "memberships": "Memberships",
+        "mobile_app": "Mobile apps",
+        "welcome": "Welcome to Akatsuki Project"
+      }
+    }
+  }
+}

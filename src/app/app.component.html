@@ -2,7 +2,7 @@
     <ng-sidebar [(opened)]="_opened" (onBackdropClicked)="_toggleSidebar()" keyClose="true" closeOnClickOutside="true"
         closeOnClickBackdrop="true" showBackdrop="true" animate="true" [sidebarClass]="'flex flex-col bg-gray-900'">
         <p class="text-white font-medium m-1">Ayuda</p>
-        <div class="border border-gray-500"></div>
+        <div class="border border-gray-600"></div>
         <button
             class="text-sm hover:bg-blue-700 text-blue-400 font-semibold py-2 px-4 rounded shadow m-1 text-left w-64">Community
             Principles</button>
@@ -61,6 +61,14 @@
             <div class="flex items-start flex-col flex-shrink-0 text-white mr-6 text-xs">
                 <p>Todos los derechos reservados 2020 | Akatsuki Team</p>
                 <p>Web client - 1.0.0.</p>
+            </div>
+            <div class="flex flex-row items-center">
+                <p class="text-white text-base mr-2 font-bold">Select language</p>
+                <select
+                    class="block appearance-none w-32 bg-gray-700 border border-gray-600 text-white py-1 px-2 rounded leading-tight focus:outline-none focus:bg-gray-800 focus:border-gray-700"
+                    (change)="changeLang($event.target.value)">
+                    <option *ngFor="let lang of langs" [value]="lang" class="text-center">{{ lang }}</option>
+                </select>
             </div>
         </nav>
     </div>

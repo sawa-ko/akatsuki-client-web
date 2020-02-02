@@ -1,0 +1,52 @@
+{
+  "Pages": {
+    "Welcome": {
+      "button": {
+        "buy": "Comprar",
+        "go_to_market": "Ir al mercado",
+        "sign_up": "Registro",
+        "status": "Estado",
+        "support": "Soporte"
+      },
+      "description": {
+        "feature_description_1": "Herramientas de calidad para que siempre pueda obtener los mejores resultados de forma rápida, fácil y efectiva.",
+        "feature_description_2": "Habla con tus compañeros de trabajo de manera fácil y rápida con conversaciones cifradas punto a punto.",
+        "feature_description_3": "Vende o compra cualquier producto que quieras en la tienda. No te preocupes, solo pueden vender certificados. :)",
+        "feature_description_4": "Somos una comunidad en la que estamos tanto en tu PC como en tu dispositivo móvil con nuestras aplicaciones multiplataforma.",
+        "feature_description_5": "Publica contenido en la sección social para decir lo que piensas, hacer encuestas y más.",
+        "frequent_question_1_desc_1": "Tenemos servidores de respaldo en caso de que uno deje de funcionar para que siempre puedas tener la mejor experiencia en Akatsuki Project.",
+        "frequent_question_1_desc_2": "Puedes verificar cómo está el estado de los servidores, las herramientas, la tienda y el área social en cualquier momento desde la página \"Estado de la API\".",
+        "frequent_question_1_desc_3": "Recuerda que puedes ayudarnos a informar cualquier error que la plataforma tenga para resolverlo lo antes posible y que siempre estar al 100% funcionando.",
+        "frequent_question_2_desc_1": "Intentamos mantener siempre la tienda a salvo de estafas y engaños, por lo que todos los vendedores en Akatsuki Project se identifican con una insignia de certificación que solo es otorgada por la administración.",
+        "frequent_question_2_desc_2": "Ningún usuario sin el rango de Vendedor puede vender en la tienda.",
+        "frequent_question_2_desc_3": "Si encuentras un estafador, no dudes en informarlo para suspender al usuario de todos los servicios de Akatsuki Project.",
+        "frequent_question_3_desc_1": "No, la membresía Premium es opcional y puedes usar Akatsuki Project sin ningún problema o limitación que te impida usarlo normalmente.",
+        "frequent_question_3_desc_2": "La membresía Premium tiene la función de poder otorgar acceso exclusivo a las características de la plataforma, como se explica anteriormente en una tabla.",
+        "frequent_question_3_desc_3": "Los usuarios gratuitos también son bienvenidos. :)",
+        "mobile_app_desc_1": "Puedes descargar nuestras aplicaciones para Android, IOS (Próximamente) y la aplicación de escritorio de Windows aquí. Intentamos mantener todos los clientes sincronizados para que puedas obtener la mejor experiencia en cada uno de ellos.",
+        "mobile_app_desc_2": "Tenemos diferentes clientes y no solo una aplicación universal porque para nosotros el nativo es mejor, de modo que cada cliente se hace de forma nativa, de modo que algunas funciones pueden llegar primero en la versión web, por ejemplo, antes que en los otros clientes.",
+        "welcome_desc_1": "Akatsuki Project es una red social para usuarios de Carder / Binners que intentan vender sus productos o utilizan herramientas de Hacking con facilidad y con excelentes resultados.",
+        "welcome_desc_2": "Tenemos una tienda donde puede vender o comprar productos de usuarios certificados de Akatsuki Project y poder usar tu producto comprado para el propósito que desees.",
+        "welcome_desc_3": "También tenemos una variedad de herramientas para que pueda sacar sus Lives de tus Bins y usarlos con buenos resultados."
+      },
+      "title": {
+        "feature_title_1": "Herramientas",
+        "feature_title_2": "Social",
+        "feature_title_3": "Marketplace",
+        "feature_title_4": "Multiplataforma",
+        "feature_title_5": "Comunidad",
+        "features": "Caracteristicas",
+        "frequent_question_1": "¿Son estables los servidores?",
+        "frequent_question_2": "¿Es seguro el mercado?",
+        "frequent_question_3": "¿Es necesaria la membresía Premium?",
+        "frequent_questions": "Preguntas frecuentes",
+        "membership_anonymous": "Anónimo",
+        "membership_free": "Miembro gratis",
+        "membership_galaxy": "Miembro Galaxia",
+        "memberships": "Membresías",
+        "mobile_app": "Aplicaciones móviles",
+        "welcome": "Bienvenido a Akatsuki Project"
+      }
+    }
+  }
+}
