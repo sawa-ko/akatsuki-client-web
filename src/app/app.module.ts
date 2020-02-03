@@ -14,12 +14,15 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HttpClient } from '@angular/common/http';
 import { SignInComponent } from './pages/Auth/sign-in/sign-in.component';
+import { SignUpComponent } from './pages/Auth/sign-up/sign-up.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, SignInComponent],
+  declarations: [AppComponent, WelcomeComponent, SignInComponent, SignUpComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FlexLayoutModule,
     LoadingBarHttpClientModule,
     LoadingBarRouterModule,
