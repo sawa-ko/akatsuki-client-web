@@ -29,7 +29,7 @@
     "crypto-js": "^3.1.9-1",
     "inquirer": "^7.0.4",
     "ng-sidebar": "^9.2.0",
-    "rxjs": "~6.4.0",
+    "rxjs": "~6.5.4",
     "tailwindcss": "1.1.4",
     "tailwindcss-schematic": "^0.3.7",
     "tslib": "^1.10.0",
