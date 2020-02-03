@@ -13,9 +13,10 @@ import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HttpClient } from '@angular/common/http';
+import { SignInComponent } from './pages/Auth/sign-in/sign-in.component';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent],
+  declarations: [AppComponent, WelcomeComponent, SignInComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
