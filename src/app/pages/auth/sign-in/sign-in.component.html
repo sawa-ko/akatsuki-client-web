@@ -1,0 +1,70 @@
+<div class="container flex flex-row" [ngClass.xs]="{'flex-col': true}">
+    <div class="p-64 mr-6 bg-signin w-3/4 rounded-lg" [ngStyle.xs]="{'width': '100%', 'height': '0%'}" fxHide.xs="true">
+    </div>
+    <img src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com" height="100%" width="100%"
+        fxHide.md="true" fxHide.lg="true" fxHide.xl="true">
+    <div class="w-4/12 bg-gray-900 rounded h-full items-center justify-center flex flex-col p-3"
+        [ngClass.xs]="{'w-full': true}">
+        <div class="flex flex-col items-start p-3">
+            <p class="text-white font-light text-4xl">{{ 'Pages.SignIn.title.welcome' | translate }}</p>
+            <p class="text-white">{{ 'Pages.SignIn.description.welcome' | translate }}</p>
+        </div>
+        <form [formGroup]="signInForm" (ngSubmit)="signInUser()" class="w-full p-3">
+            <div *ngIf="errorSignIn"
+                class="bg-red-500 border-t-4 border-red-800 rounded-b text-red-900 px-4 py-3 shadow-md" role="alert">
+                <div class="flex">
+                    <div class="py-1"><svg class="fill-current h-6 w-6 text-red-800 mr-4"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                        </svg></div>
+                    <div>
+                        <p class="font-bold">{{ errorSignInTitle }}</p>
+                        <p class="text-sm">{{ errorSignInDescription }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-3 mb-4">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                    {{ 'Pages.SignIn.label.email' | translate }}
+                </label>
+                <input [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" formControlName="email" class=" appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+            focus:outline-none focus:bg-gray-800" type="email" placeholder="yourname@akatsukiapp.com">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                    {{ 'Pages.SignIn.label.password' | translate }}
+                </label>
+                <input [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" formControlName="password"
+                    class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-800"
+                    type="password" placeholder="**********">
+            </div>
+            <div>
+                <label class="flex items-center">
+                    <input formControlName="rememberme" type="checkbox" class="form-checkbox text-gray-700">
+                    <p class="text-white text-base ml-2">{{ 'Pages.SignIn.label.rememberme' | translate }}</p>
+                </label>
+            </div>
+            <div class="py-3 flex flex-row">
+                <button type="submit"
+                    [ngClass]="{'bg-gray-800': signInFormStatusDisabled, 'hover:bg-gray-800': signInFormStatusDisabled}"
+                    class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2 w-full">
+                    {{ 'Pages.SignIn.button.signin' | translate }}
+                </button>
+                <button type="button" class="bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded shadow w-full"
+                    [routerLink]="[ '/sign-up' ]">{{ 'Pages.SignIn.button.signup' | translate }}</button>
+            </div>
+        </form>
+        <div class="w-full px-3 flex flex-row items-center">
+            <div class="border border-gray-700 w-full h-px"></div>
+            <p class="text-white px-2">O</p>
+            <div class="border border-gray-700 w-full h-px"></div>
+        </div>
+        <div class="p-3 w-full flex flex-col">
+            <button
+                class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded shadow w-full mb-2">{{ 'Pages.SignIn.button.recover_password' | translate }}</button>
+            <button
+                class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded shadow w-full">{{ 'Pages.SignIn.button.activate_account' | translate }}</button>
+        </div>
+    </div>
+</div>

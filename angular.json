@@ -25,7 +25,7 @@
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "src/tailwind.scss"],
-            "scripts": ["../node_modules/crypto-js/crypto-js.js"],
+            "scripts": ["node_modules/crypto-js/crypto-js.js"],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }

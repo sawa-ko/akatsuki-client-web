@@ -1,5 +1,32 @@
 {
   "Pages": {
+    "SignIn": {
+      "button": {
+        "activate_account": "Activate my account",
+        "recover_password": "Recover password",
+        "signin": "Sign In",
+        "signup": "Sign Up"
+      },
+      "description": {
+        "welcome": "Please login to continue and manage your user account."
+      },
+      "label": {
+        "email": "Email",
+        "password": "Password",
+        "rememberme": "Remember me"
+      },
+      "messages": {
+        "account_activation": "Please first verify your account with the message that we have sent to your email. Once you do, the account login will be enabled.",
+        "incorrect_data": "Please complete the required fields to continue.",
+        "password_change": "Hmm, it seems that this account has a pending password change request. The process ends with the message that we have sent an email to send the login to the account again.",
+        "user_ban": "We are sorry but this user account has been suspended."
+      },
+      "title": {
+        "incorrect_data": "Incorrect data",
+        "problem": "We have problems",
+        "welcome": "Welcome back"
+      }
+    },
     "Welcome": {
       "button": {
         "buy": "Buy",

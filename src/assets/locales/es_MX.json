@@ -1,5 +1,32 @@
 {
   "Pages": {
+    "SignIn": {
+      "button": {
+        "activate_account": "Activa mi cuenta",
+        "recover_password": "Recuperar contraseña",
+        "signin": "Iniciar sesión",
+        "signup": "Regístrate"
+      },
+      "description": {
+        "welcome": "Inicie sesión para continuar y administrar tu cuenta de usuario."
+      },
+      "label": {
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "rememberme": "Recuerdame"
+      },
+      "messages": {
+        "account_activation": "Primero verifica tu cuenta con el mensaje que te hemos enviado a tu correo electrónico. Una vez que lo hagas, se habilitará el inicio de sesión de la cuenta.",
+        "incorrect_data": "Por favor completa los campos requeridos para continuar.",
+        "password_change": "Hmm, parece que esta cuenta tiene una solicitud de cambio de contraseña pendiente. Finaliza el proceso de cambio de contraseña con el mensaje que te hemos enviado y sigue los pasos indicados.",
+        "user_ban": "Lo sentimos pero esta cuenta de usuario ha sido suspendida."
+      },
+      "title": {
+        "incorrect_data": "Datos incorrectos",
+        "problem": "Tenemos problemas",
+        "welcome": "Bienvenido"
+      }
+    },
     "Welcome": {
       "button": {
         "buy": "Comprar",
