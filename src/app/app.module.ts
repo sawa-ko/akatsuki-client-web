@@ -1,52 +1,48 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './config/app-routing.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { SidebarModule } from 'ng-sidebar';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
-import { DeviceDetectorModule } from 'ngx-device-detector';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { SignInComponent } from './pages/auth/sign-in/sign-in.component';
-import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { HttpInterceptorG } from './utils/interceptors/http/http-interceptor-g';
+import { AuthModule } from './pages/auth/auth.module';
+import { SidebarModule } from 'ng-sidebar';
+import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    SignInComponent,
-    SignUpComponent,
-  ],
+  declarations: [AppComponent, WelcomeComponent],
   imports: [
     DeviceDetectorModule.forRoot(),
     SidebarModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: createTranslateLoader,
+        useFactory: (http: HttpClient) =>
+          new TranslateHttpLoader(http, './assets/locales/', '.json'),
         deps: [HttpClient],
       },
+      isolate: true,
     }),
+    CommonModule,
+    LoadingBarHttpClientModule,
+    LoadingBarRouterModule,
+    LoadingBarModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FlexLayoutModule,
-    FormsModule,
-    ReactiveFormsModule,
-    LoadingBarHttpClientModule,
-    LoadingBarRouterModule,
-    LoadingBarModule,
+    AuthModule.forRoot(),
   ],
   providers: [
     {
@@ -58,7 +54,3 @@ import { HttpInterceptorG } from './utils/interceptors/http/http-interceptor-g';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/locales/', '.json');
-}

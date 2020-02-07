@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { EncryptService } from '../Encrypt/encrypt.service';
-import { SignInInterface } from 'src/app/utils/interfaces/auth/signin.interface';
+import { SignInInterface } from '../../utils/interfaces/auth/signin.interface';
+import { SignUpInterface } from '../../utils/interfaces/auth/signup.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +13,10 @@ export class AuthService {
     private readonly httpClient: HttpClient,
     private readonly encryptService: EncryptService,
   ) {}
+
+  public signUp(signUpData: SignUpInterface) {
+    return this.httpClient.put(`${environment.api}/auth/signup`, signUpData);
+  }
 
   public signIn(signInData: SignInInterface) {
     return this.httpClient.post(`${environment.api}/auth/signin`, signInData);
