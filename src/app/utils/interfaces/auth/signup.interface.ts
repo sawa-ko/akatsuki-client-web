@@ -1,12 +1,12 @@
 export interface KeySingUpInterface {
-    key: string
+  readonly key: string;
 }
 
 export interface SignUpInterface {
-  name: string;
-  username: string;
-  specialty: string;
-  device: string | number;
-  email: KeySingUpInterface,
-  password: KeySingUpInterface
+  readonly name: string;
+  readonly username: string;
+  readonly specialty: string;
+  readonly device: string | number;
+  readonly email: KeySingUpInterface;
+  readonly password: KeySingUpInterface;
 }

@@ -86,7 +86,9 @@ export class SignUpComponent implements OnInit {
 
     if (this.signUpForm.valid) {
       this.authService.signUp(data).subscribe({
-        next: () => {},
+        next: () => {
+          this.router.navigate(['auth/verify-account']);
+        },
         error: (response: any) => {
           this.errorSignUp = true;
           this.signUpFormStatusDisabled = true;

@@ -4,6 +4,7 @@ import { environment } from '../../../environments/environment';
 import { EncryptService } from '../Encrypt/encrypt.service';
 import { SignInInterface } from '../../utils/interfaces/auth/signin.interface';
 import { SignUpInterface } from '../../utils/interfaces/auth/signup.interface';
+import { ActivactionInterface } from '../../utils/interfaces/auth/activation.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +21,13 @@ export class AuthService {
 
   public signIn(signInData: SignInInterface) {
     return this.httpClient.post(`${environment.api}/auth/signin`, signInData);
+  }
+
+  public activationAccount(activactionData: ActivactionInterface) {
+    return this.httpClient.patch(
+      `${environment.api}/auth/account/verify/email`,
+      activactionData,
+    );
   }
 
   public getToken() {
