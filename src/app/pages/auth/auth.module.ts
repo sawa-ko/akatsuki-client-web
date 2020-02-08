@@ -21,7 +21,7 @@ import { TranslateModule } from '@ngx-translate/core';
   exports: [CommonModule, TranslateModule],
 })
 export class AuthModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
     };
