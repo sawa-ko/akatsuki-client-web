@@ -29,17 +29,19 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                     Nombre
                 </label>
-                <input formControlName="name" [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+                <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
                 focus:outline-none focus:bg-gray-800" type="text" placeholder="Sawako" #inputName>
                 <div class="text-right w-full">
                     <p class="text-gray-500 text-xs italic">{{ inputName.value?.length || 0 }}/30 (min 5)</p>
                 </div>
             </div>
-            <div class="w-ful">
+            <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                     Usuario
                 </label>
-                <input formControlName="username" [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+                <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="username"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
                 focus:outline-none focus:bg-gray-800" type="text" placeholder="@myusername" #inputUsername>
                 <div class="text-right w-full">
                     <p class="text-gray-500 text-xs italic">{{ inputUsername.value?.length || 0 }}/15 (min 5)</p>
@@ -49,7 +51,8 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                     Especialidad
                 </label>
-                <input formControlName="specialty" [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+                <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="specialty"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
                 focus:outline-none focus:bg-gray-800" type="text" placeholder="Carder and binner..." #inputSpecialty>
                 <div class="text-right w-full">
                     <p class="text-gray-500 text-xs italic">{{ inputSpecialty.value?.length  || 0 }}/100 (min 10)</p>
@@ -59,7 +62,8 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                     Email
                 </label>
-                <input formControlName="email" [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+                <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="email"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
                 focus:outline-none focus:bg-gray-800" type="email" placeholder="yourname@akatsukiapp.com"
                     autocomplete="username">
             </div>
@@ -67,7 +71,8 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                     Contraseña
                 </label>
-                <input formControlName="password" [ngClass]="{'bg-gray-800': signInFormStatusDisabled}"
+                <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="password"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}"
                     class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-800"
                     type="password" placeholder="**********" autocomplete="new-password" #inputPassword>
                 <div class="text-right w-full">
@@ -78,7 +83,8 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                     Confirmar contraseña
                 </label>
-                <input formControlName="password_confirm" [ngClass]="{'bg-gray-800': signInFormStatusDisabled}"
+                <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="password_confirm"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}"
                     class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-800"
                     type="password" placeholder="**********" autocomplete="new-password" #inputPasswordConfirm>
                 <div class="text-right w-full">
@@ -94,12 +100,12 @@
             </div>
             <div class="pt-3 w-full flex flex-row">
                 <button
-                    [ngClass]="{'bg-gray-800': signInFormStatusDisabled, 'hover:bg-gray-800': signInFormStatusDisabled}"
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled, 'hover:bg-gray-800': signUpFormStatusDisabled}"
                     class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2 w-full">
                     Sign Up
                 </button>
                 <button class="bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded shadow w-full"
-                    [routerLink]="[ '/sign-in' ]">Sign In</button>
+                    [routerLink]="[ '/auth/sign-in' ]">Sign In</button>
             </div>
         </form>
     </div>

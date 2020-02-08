@@ -1,0 +1,68 @@
+<div fxFill fxLayoutAlign="center center" fxFlex="100%">
+    <div class="container rounded h-auto bg-gray-900 p-6 flex flex-col justify-center shadow w-2/4"
+        [ngClass.xs]="{'w-full': true}">
+        <div class="w-full" fxLayoutAlign="center center">
+            <img src="../../../../assets/verification-email/email_verify.svg" alt="www.akatsukiapp.com" width="280"
+                height="280">
+        </div>
+        <div class="flex flex-col text-center p-3">
+            <p class="text-white font-light text-4xl">¡Activemos tu cuenta!</p>
+            <p class="text-white">Por favor introduce tu Id de usuario y el Token de activacion. Recuerda que te hemos
+                enviado estos datos por correo electronico.</p>
+        </div>
+        <div *ngIf="errorActivationAccount"
+            class="bg-red-500 border-t-4 border-red-800 rounded-b text-red-900 px-4 py-3 shadow-md mb-2" role="alert">
+            <div class="flex">
+                <div class="py-1"><svg class="fill-current h-6 w-6 text-red-800 mr-4" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                    </svg></div>
+                <div>
+                    <p class="font-bold">Tenemos problemas</p>
+                    <p class="text-sm">Lo sentimos pero el Token de confirmacion es incorrecto.</p>
+                </div>
+            </div>
+        </div>
+        <form [formGroup]="activationAccountForm" (ngSubmit)="signUpUser()" class="w-full">
+            <div class="flex flex-row" [ngClass.xs]="{'flex-col': true}">
+                <div class="w-full mr-2">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                        Id de usuario
+                    </label>
+                    <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="id"
+                        [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+                    focus:outline-none focus:bg-gray-800" type="text" placeholder="XXXXXXXXXXXXXXXXXXXXXXXXX"
+                        #inputName>
+                </div>
+                <div class="w-full">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                        Token
+                    </label>
+                    <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="token"
+                        [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+                    focus:outline-none focus:bg-gray-800" type="text" placeholder="XXXXXXXXXXXX" #inputUsername>
+                </div>
+            </div>
+            <H2 class="text-3xl text-white">
+                Nota importante
+            </H2>
+            <p class="text-white text-base">
+                Recuerda que si no llega el correo de activacion a tu correo electronico puedes pedir otro con el boton
+                de
+                "Reenviar confirmacion". Si aun asi no llega por favor contactanos para ayudarte lo mas pronto posible.
+            </p>
+            <div class="pt-3 w-full flex flex-row" [ngClass.xs]="{'flex-col': true}">
+                <button
+                    [ngClass]="{'bg-gray-800': signUpFormStatusDisabled, 'hover:bg-gray-800': signUpFormStatusDisabled}"
+                    class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2 w-full"
+                    type="submit">
+                    Activar mi cuenta
+                </button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded shadow w-full"
+                    [ngClass.xs]="{'mt-2': true}" type="button">Reenviar
+                    confirmacion</button>
+            </div>
+        </form>
+    </div>
+</div>

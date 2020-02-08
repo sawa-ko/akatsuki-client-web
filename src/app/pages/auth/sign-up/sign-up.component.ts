@@ -89,21 +89,33 @@ export class SignUpComponent implements OnInit {
         next: () => {},
         error: (response: any) => {
           this.errorSignUp = true;
+          this.signUpFormStatusDisabled = true;
           this.errorSignUpTitle = 'Tenemos problemas';
           this.errorSignUpDescription = response.error.message;
+
+          setTimeout(() => {
+            this.signUpFormStatusDisabled = false;
+            this.errorSignUp = false;
+            this.errorSignUpTitle = '';
+            this.errorSignUpDescription = '';
+          }, 6000);
         },
       });
     } else {
+      this.signUpForm.disable();
+      this.signUpFormStatusDisabled = true;
       this.errorSignUp = true;
       this.errorSignUpTitle = 'Tenemos problemas';
       this.errorSignUpDescription =
         'Por favor completa los campos requeridos para procesar el registro.';
 
       setTimeout(() => {
+        this.signUpForm.enable();
+        this.signUpFormStatusDisabled = false;
         this.errorSignUp = false;
         this.errorSignUpTitle = '';
         this.errorSignUpDescription = '';
-      }, 10000);
+      }, 6000);
     }
   }
 }

@@ -4467,6 +4467,16 @@ inquirer-autocomplete-prompt@^0.12.2:
     inquirer "3.2.0"
     run-async "^2.3.0"
 
+inquirer-autocomplete-prompt@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/inquirer-autocomplete-prompt/-/inquirer-autocomplete-prompt-1.0.2.tgz#3f2548f73dd12f0a541be055ea9c8c7aedeb42bf"
+  integrity sha512-vNmAhhrOQwPnUm4B9kz1UB7P98rVF1z8txnjp53r40N0PBCuqoRWqjg3Tl0yz0UkDg7rEUtZ2OZpNc7jnOU9Zw==
+  dependencies:
+    ansi-escapes "^3.0.0"
+    chalk "^2.0.0"
+    figures "^2.0.0"
+    run-async "^2.3.0"
+
 inquirer-fuzzy-path@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/inquirer-fuzzy-path/-/inquirer-fuzzy-path-2.2.0.tgz#97015726645618615199c9c4fe9c9d91930519aa"
@@ -5892,6 +5902,13 @@ ngx-device-detector@^1.3.20:
   version "1.3.20"
   resolved "https://registry.yarnpkg.com/ngx-device-detector/-/ngx-device-detector-1.3.20.tgz#4cb81bdfe0342427c57f561f76d4e461be7e1cb4"
   integrity sha512-juYwd4Z5ikCDf6TnnkU44BmEsJVF50V9+85dQ9PW0VhFjxfKEHQ1nLME0ticYA7yKYj4FNQuHh4qazBSu4nkMQ==
+  dependencies:
+    tslib "^1.9.0"
+
+ngx-quicklink@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ngx-quicklink/-/ngx-quicklink-0.2.0.tgz#68c0ad097dac768d29b8d977ddcf8c413e463725"
+  integrity sha512-9Y0SS997WW0My4W6xWwDYBMWYVphictDIMkwXWMo7d3Pzzje6ZVVDXuIkcsW89wqvyGJfH1E8PoS2fsgZA1I2Q==
   dependencies:
     tslib "^1.9.0"
 

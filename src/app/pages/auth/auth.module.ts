@@ -7,9 +7,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { VerificationAccountComponent } from './verification-account/verification-account.component';
 
 @NgModule({
-  declarations: [SignInComponent, SignUpComponent],
+  declarations: [SignInComponent, SignUpComponent, VerificationAccountComponent],
   imports: [
     CommonModule,
     TranslateModule,
@@ -18,7 +19,6 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [CommonModule, TranslateModule],
 })
 export class AuthModule {
   static forRoot(): ModuleWithProviders<AuthModule> {
