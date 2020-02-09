@@ -1,8 +1,31 @@
 {
   "Pages": {
+    "Activate_account": {
+      "button": {
+        "activate_account": "Activar mi cuenta",
+        "resend_confirmation": "Reenviar confirmación"
+      },
+      "description": {
+        "activate_account": "Por favor introduce tu Id de usuario y el Token de activacion. Recuerda que te hemos enviado estos datos por correo electronico.",
+        "important_note": "Recuerda que si no llega el correo de activacion a tu correo electronico puedes pedir otro con el boton de \"Reenviar confirmacion\". Si aun asi no llega por favor contactanos para ayudarte lo mas pronto posible."
+      },
+      "label": {
+        "token": "TOKEN",
+        "user_id": "ID DE USUARIO"
+      },
+      "messages": {
+        "empty_fields": "Por favor completa los campos requeridos para procesar la activación de la cuenta."
+      },
+      "title": {
+        "activate_account": "¡Activemos tu cuenta!",
+        "important_note": "Nota importante",
+        "lets_go_login": "¡Es hora de iniciar sesión!",
+        "we_have_problems": "Tenemos problemas"
+      }
+    },
     "SignIn": {
       "button": {
-        "activate_account": "Activa mi cuenta",
+        "activate_account": "Activar mi cuenta",
         "recover_password": "Recuperar contraseña",
         "signin": "Iniciar sesión",
         "signup": "Regístrate"
@@ -25,6 +48,32 @@
         "incorrect_data": "Datos incorrectos",
         "problem": "Tenemos problemas",
         "welcome": "Bienvenido"
+      }
+    },
+    "SignUp": {
+      "button": {
+        "sign_in": "Iniciar sesión",
+        "sign_up": "Unirme"
+      },
+      "description": {
+        "lets_join": "Completa los siguientes campos y estarás listo para usar tu cuenta."
+      },
+      "label": {
+        "email": "Correo electrónico",
+        "name": "Nombre",
+        "password": "Contraseña",
+        "password_confirm": "Confirmar contraseña",
+        "specialty": "Especialidad",
+        "username": "Nombre de usuario"
+      },
+      "messages": {
+        "empty_fields": "Por favor completa los campos requeridos para procesar el registro.",
+        "error_password_confirm": "Por favor confirma que las contraseñas sean iguales."
+      },
+      "title": {
+        "accept_terms": "Acepto los términos y condiciones",
+        "lets_join": "¡Vamos a unirnos!",
+        "we_habe_problems": "Tenemos problemas"
       }
     },
     "Welcome": {

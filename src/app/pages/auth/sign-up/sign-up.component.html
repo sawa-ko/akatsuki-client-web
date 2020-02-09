@@ -6,8 +6,9 @@
     <div class="w-4/12 bg-gray-900 rounded h-full items-center justify-center flex flex-col p-3"
         [ngClass.xs]="{'w-full': true}">
         <div class="flex flex-col items-start p-3">
-            <p class="text-white font-light text-4xl">¡Vamos a registrarnos!</p>
-            <p class="text-white">Completa los siguientes campos y estaras listo para usar tu cuenta.</p>
+            <p class="text-white font-light text-4xl">{{ 'Pages.SignUp.title.lets_join' | translate }}
+            </p>
+            <p class="text-white">{{ 'Pages.SignUp.description.lets_join' | translate }}</p>
         </div>
         <form [formGroup]="signUpForm" (ngSubmit)="signUpUser()" class="w-full p-3">
             <div *ngIf="errorSignUp"
@@ -27,7 +28,7 @@
             </div>
             <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Nombre
+                    {{ 'Pages.SignUp.label.name' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
@@ -38,7 +39,7 @@
             </div>
             <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Usuario
+                    {{ 'Pages.SignUp.label.username' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="username"
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
@@ -49,7 +50,7 @@
             </div>
             <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Especialidad
+                    {{ 'Pages.SignUp.label.specialty' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="specialty"
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
@@ -60,7 +61,7 @@
             </div>
             <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Email
+                    {{ 'Pages.SignUp.label.email' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="email"
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
@@ -69,7 +70,7 @@
             </div>
             <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Contraseña
+                    {{ 'Pages.SignUp.label.password' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="password"
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}"
@@ -81,7 +82,7 @@
             </div>
             <div class="w-full">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Confirmar contraseña
+                    {{ 'Pages.SignUp.label.password_confirm' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="password_confirm"
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}"
@@ -95,17 +96,17 @@
             <div class="flex w-full">
                 <label class="flex items-center">
                     <input formControlName="rememberme" type="checkbox" class="form-checkbox text-gray-700">
-                    <p class="text-white text-base ml-2">Acepto los terminos y condiciones</p>
+                    <p class="text-white text-base ml-2">{{ 'Pages.SignUp.title.accept_terms' | translate }}</p>
                 </label>
             </div>
             <div class="pt-3 w-full flex flex-row">
                 <button
                     [ngClass]="{'bg-gray-800': signUpFormStatusDisabled, 'hover:bg-gray-800': signUpFormStatusDisabled}"
                     class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2 w-full">
-                    Sign Up
+                    {{ 'Pages.SignUp.button.sign_up' | translate }}
                 </button>
                 <button class="bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded shadow w-full"
-                    [routerLink]="[ '/auth/sign-in' ]">Sign In</button>
+                    [routerLink]="[ '/auth/sign-in' ]">{{ 'Pages.SignUp.button.sign_in' | translate }}</button>
             </div>
         </form>
     </div>

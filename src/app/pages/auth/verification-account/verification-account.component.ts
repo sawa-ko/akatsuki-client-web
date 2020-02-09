@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/Auth/auth.service';
 import { Router } from '@angular/router';
+import { TranslatationService } from 'src/app/services/Translation/translatation.service';
 
 @Component({
   templateUrl: './verification-account.component.html',
@@ -23,6 +24,7 @@ export class VerificationAccountComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly authService: AuthService,
     private readonly router: Router,
+    private readonly translationService: TranslatationService,
   ) {
     this.activationAccountForm = this.formBuilder.group({
       id: ['', Validators.required],
@@ -44,7 +46,9 @@ export class VerificationAccountComponent implements OnInit {
           this.activationAccountFormStatusDisabled = true;
           this.activationAccountForm.disable();
           this.successActivationAccount = true;
-          this.successActivationAccountTitle = '¡Es hora de iniciar sesión!';
+          this.successActivationAccountTitle = this.translationService.getTranslate(
+            'Pages.Activate_account.title.lets_go_login',
+          );
           this.successActivationAccountDescription = response.message;
 
           setTimeout(() => {
@@ -55,7 +59,9 @@ export class VerificationAccountComponent implements OnInit {
           this.activationAccountFormStatusDisabled = true;
           this.activationAccountForm.disable();
           this.errorActivationAccount = true;
-          this.errorActivationAccountTitle = 'Tenemos problemas';
+          this.errorActivationAccountTitle = this.translationService.getTranslate(
+            'Pages.Activate_account.title.we_have_problems',
+          );
           this.errorActivationAccountDescription = response.error.message;
 
           setTimeout(() => {
@@ -70,17 +76,20 @@ export class VerificationAccountComponent implements OnInit {
       this.activationAccountFormStatusDisabled = true;
       this.activationAccountForm.disable();
       this.errorActivationAccount = true;
-      this.errorActivationAccountTitle = 'Tenemos problemas';
-      this.errorActivationAccountDescription =
-        'Por favor completa los campos requeridos para procesar la activacion de la cuenta.';
+      this.errorActivationAccountTitle = this.translationService.getTranslate(
+        'Pages.Activate_account.title.we_have_problems',
+      );
+      this.errorActivationAccountDescription = this.translationService.getTranslate(
+        'Pages.Activate_account.messages.empty_fields',
+      );
 
       setTimeout(() => {
         this.activationAccountForm.controls.token.setValue('');
         this.activationAccountFormStatusDisabled = false;
         this.activationAccountForm.enable();
         this.errorActivationAccount = false;
-        this.errorActivationAccountTitle = '';
-        this.errorActivationAccountDescription = '';
+        this.errorActivationAccountTitle = null;
+        this.errorActivationAccountDescription = null;
       }, 6000);
     }
   }

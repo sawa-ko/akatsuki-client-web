@@ -1,5 +1,28 @@
 {
   "Pages": {
+    "Activate_account": {
+      "button": {
+        "activate_account": "Activate my account",
+        "resend_confirmation": "Resend Confirmation"
+      },
+      "description": {
+        "activate_account": "Please enter your user ID and activation Token. Remember that we have sent you this information by email.",
+        "important_note": "Remember that if the activation email does not arrive to your email you can request another one with the \"Resend confirmation\" button. If it still does not arrive please contact us to help you as soon as possible."
+      },
+      "label": {
+        "token": "TOKEN",
+        "user_id": "USER ID"
+      },
+      "messages": {
+        "empty_fields": "Please complete the required fields to process account activation."
+      },
+      "title": {
+        "activate_account": "Let's activate your account!",
+        "important_note": "Important note",
+        "lets_go_login": "It's time to login!",
+        "we_have_problems": "We have problems"
+      }
+    },
     "SignIn": {
       "button": {
         "activate_account": "Activate my account",
@@ -25,6 +48,32 @@
         "incorrect_data": "Incorrect data",
         "problem": "We have problems",
         "welcome": "Welcome back"
+      }
+    },
+    "SignUp": {
+      "button": {
+        "sign_in": "Sign In",
+        "sign_up": "Sign Up"
+      },
+      "description": {
+        "lets_join": "Complete the following fields and you will be ready to use your account."
+      },
+      "label": {
+        "email": "Email",
+        "name": "Name",
+        "password": "Password",
+        "password_confirm": "Confirm Password",
+        "specialty": "Specialty",
+        "username": "Username"
+      },
+      "messages": {
+        "empty_fields": "Please complete the required fields to process the registration.",
+        "error_password_confirm": "Please confirm that the passwords are the same."
+      },
+      "title": {
+        "accept_terms": "I accept the terms and conditions",
+        "lets_join": "Let's join!",
+        "we_habe_problems": "We have problems"
       }
     },
     "Welcome": {

@@ -24,7 +24,7 @@ export class SignInComponent implements OnInit {
   ) {
     this.signInForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      password: ['', Validators.required],
       rememberme: false,
     });
   }
@@ -45,9 +45,7 @@ export class SignInComponent implements OnInit {
   async signInUser() {
     this.signInFormStatusDisabled = true;
     this.signInForm.disable();
-    if (
-      this.signInForm.controls.email.value === '' &&
-      this.signInForm.controls.password.value === ''
+    if (this.signInForm.valid
     ) {
       this.errorSignIn = true;
       this.errorSignInTitle = 'Datos incorrectos';
@@ -58,8 +56,8 @@ export class SignInComponent implements OnInit {
         this.signInForm.enable();
         this.signInFormStatusDisabled = false;
         this.errorSignIn = false;
-        this.errorSignInTitle = '';
-        this.errorSignInDescription = '';
+        this.errorSignInTitle = null;
+        this.errorSignInDescription = null;
       }, 5000);
 
       return;

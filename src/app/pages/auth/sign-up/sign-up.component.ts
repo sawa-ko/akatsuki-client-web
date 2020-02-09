@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { AuthService } from 'src/app/services/Auth/auth.service';
+import { AuthService } from '../../../services/Auth/auth.service';
 import { Router } from '@angular/router';
+import { TranslatationService } from '../../../services/Translation/translatation.service';
 
 @Component({
   templateUrl: './sign-up.component.html',
@@ -21,6 +22,7 @@ export class SignUpComponent implements OnInit {
     private readonly deviceService: DeviceDetectorService,
     private readonly authService: AuthService,
     private readonly router: Router,
+    private readonly translationService: TranslatationService,
   ) {
     this.signUpForm = this.formBuilder.group({
       name: [
@@ -85,38 +87,66 @@ export class SignUpComponent implements OnInit {
     };
 
     if (this.signUpForm.valid) {
-      this.authService.signUp(data).subscribe({
-        next: () => {
-          this.router.navigate(['auth/verify-account']);
-        },
-        error: (response: any) => {
-          this.errorSignUp = true;
-          this.signUpFormStatusDisabled = true;
-          this.errorSignUpTitle = 'Tenemos problemas';
-          this.errorSignUpDescription = response.error.message;
+      if (
+        this.signUpForm.controls.password ===
+        this.signUpForm.controls.password_confirm
+      ) {
+        this.authService.signUp(data).subscribe({
+          next: () => {
+            this.router.navigate(['auth/verify-account']);
+          },
+          error: (response: any) => {
+            this.errorSignUp = true;
+            this.signUpFormStatusDisabled = true;
+            this.errorSignUpTitle = this.translationService.getTranslate(
+              'Pages.SignUp.title.we_have_problems',
+            );
+            this.errorSignUpDescription = response.error.message;
 
-          setTimeout(() => {
-            this.signUpFormStatusDisabled = false;
-            this.errorSignUp = false;
-            this.errorSignUpTitle = '';
-            this.errorSignUpDescription = '';
-          }, 6000);
-        },
-      });
+            setTimeout(() => {
+              this.signUpFormStatusDisabled = false;
+              this.errorSignUp = false;
+              this.errorSignUpTitle = null;
+              this.errorSignUpDescription = null;
+            }, 6000);
+          },
+        });
+      } else {
+        this.signUpForm.disable();
+        this.signUpFormStatusDisabled = true;
+        this.errorSignUp = true;
+        this.errorSignUpTitle = this.translationService.getTranslate(
+          'Pages.SignUp.title.we_have_problems',
+        );
+        this.errorSignUpDescription = this.translationService.getTranslate(
+          'Pages.SignUp.messages.error_password_confirm',
+        );
+
+        setTimeout(() => {
+          this.signUpForm.enable();
+          this.signUpFormStatusDisabled = false;
+          this.errorSignUp = false;
+          this.errorSignUpTitle = null;
+          this.errorSignUpDescription = null;
+        }, 6000);
+      }
     } else {
       this.signUpForm.disable();
       this.signUpFormStatusDisabled = true;
       this.errorSignUp = true;
-      this.errorSignUpTitle = 'Tenemos problemas';
-      this.errorSignUpDescription =
-        'Por favor completa los campos requeridos para procesar el registro.';
+      this.errorSignUpTitle = this.translationService.getTranslate(
+        'Pages.SignUp.title.we_have_problems',
+      );
+      this.errorSignUpDescription = this.translationService.getTranslate(
+        'Pages.SignUp.messages.empty_fields',
+      );
 
       setTimeout(() => {
         this.signUpForm.enable();
         this.signUpFormStatusDisabled = false;
         this.errorSignUp = false;
-        this.errorSignUpTitle = '';
-        this.errorSignUpDescription = '';
+        this.errorSignUpTitle = null;
+        this.errorSignUpDescription = null;
       }, 6000);
     }
   }
