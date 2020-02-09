@@ -4,6 +4,9 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 import * as ip from 'public-ip';
 import { AuthService } from '../../../services/auth/auth.service';
 import { SignInInterface } from '../../../utils/interfaces/auth/signin.interface';
+import { Router } from '@angular/router';
+import { EncryptService } from '../../../services/encrypt/encrypt.service';
+import { TranslatationService } from '../../../services/translation/translatation.service';
 
 @Component({
   templateUrl: './sign-in.component.html',
@@ -21,6 +24,9 @@ export class SignInComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly deviceService: DeviceDetectorService,
     private readonly authService: AuthService,
+    private readonly router: Router,
+    private readonly encryptService: EncryptService,
+    private readonly translationService: TranslatationService,
   ) {
     this.signInForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -45,12 +51,14 @@ export class SignInComponent implements OnInit {
   async signInUser() {
     this.signInFormStatusDisabled = true;
     this.signInForm.disable();
-    if (this.signInForm.valid
-    ) {
+    if (this.signInForm.valid) {
       this.errorSignIn = true;
-      this.errorSignInTitle = 'Datos incorrectos';
-      this.errorSignInDescription =
-        'Por favor completa los campos requeridos para continuar.';
+      this.errorSignInTitle = this.translationService.getTranslate(
+        'Pages.SignIn.title.we_have_problems',
+      );
+      this.errorSignInDescription = this.translationService.getTranslate(
+        'Pages.SignIn.messages.empty_fields',
+      );
 
       setTimeout(() => {
         this.signInForm.enable();
@@ -72,15 +80,59 @@ export class SignInComponent implements OnInit {
 
     return this.authService.signIn(data).subscribe({
       next: (response: any) => {
-        this.signInForm.disable();
-        this.signInFormStatusDisabled = true;
-        console.log('Eso fue correcto.');
+        localStorage.setItem('id', response.user_id);
+        localStorage.setItem('session_id', response.session_id);
+        localStorage.setItem('token', response.token);
+
+        setTimeout(() => {
+          if (
+            localStorage.getItem('id') !== null &&
+            localStorage.getItem('session_id') !== null &&
+            localStorage.getItem('token') !== null
+          ) {
+            this.router.navigate(['/home']);
+          } else {
+            this.errorSignIn = true;
+            this.errorSignInTitle = this.translationService.getTranslate(
+              'Pages.SignIn.title.we_have_problems',
+            );
+            this.errorSignInDescription = this.translationService.getTranslate(
+              'Pages.SignIn.messages.error_processing_data',
+            );
+
+            return this.authService
+              .logOut({
+                userId: response.user_id,
+                sesionId: response.session_id,
+              })
+              .subscribe({
+                next: () => {
+                  this.signInForm.enable();
+                  this.signInFormStatusDisabled = false;
+                  this.errorSignIn = true;
+                  this.errorSignInTitle = null;
+                  this.errorSignInDescription = null;
+                },
+                error: () => {
+                  this.errorSignIn = true;
+                  this.errorSignInTitle = this.translationService.getTranslate(
+                    'Pages.SignIn.title.we_have_problems',
+                  );
+                  this.errorSignInDescription = this.translationService.getTranslate(
+                    'Pages.SignIn.messages.error_sesion_log_out',
+                  );
+                },
+              });
+          }
+        }, 2000);
       },
       error: (response: any) => {
         this.signInForm.enable();
         this.signInFormStatusDisabled = false;
         this.errorSignIn = true;
-        this.errorSignInTitle = 'Tenemos problemas';
+        this.errorSignInTitle = this.translationService.getTranslate(
+          'Pages.SignIn.title.we_have_problems',
+        );
         this.errorSignInDescription = response.error.message;
       },
     });

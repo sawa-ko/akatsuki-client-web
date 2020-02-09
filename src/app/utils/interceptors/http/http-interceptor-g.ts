@@ -15,8 +15,11 @@ export class HttpInterceptorG implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     this.token = this.authService.getToken();
-    if (localStorage.getItem('lang')) {
+
+    if (localStorage.getItem('lang') !== null) {
       this.lang = localStorage.getItem('lang');
+    } else {
+      this.lang = 'en_US';
     }
 
     if (req.url.search('/upload/') === -1) {

@@ -7,6 +7,7 @@ import { SignUpInterface } from '../../utils/interfaces/auth/signup.interface';
 import { ActivactionInterface } from '../../utils/interfaces/auth/activation.interface';
 import { RequestResetPasswordInterface } from '../../utils/interfaces/auth/request_reset_password.interface';
 import { ChangePasswordInterface } from '../../utils/interfaces/auth/change_password.interface';
+import { LogOutInterface } from 'src/app/utils/interfaces/auth/log_out.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -23,6 +24,13 @@ export class AuthService {
 
   public signIn(signInData: SignInInterface) {
     return this.httpClient.post(`${environment.api}/auth/signin`, signInData);
+  }
+
+  public logOut(logOutData: LogOutInterface) {
+    return this.httpClient.post(
+      `${environment.api}/auth/account/logout`,
+      logOutData,
+    );
   }
 
   public activationAccount(activactionData: ActivactionInterface) {
@@ -47,13 +55,10 @@ export class AuthService {
   }
 
   public getToken() {
-    if (localStorage.getItem('token') === null) {
-      return this.encryptService.get('123456$#@$^@1ERF', 'Waiting...');
+    if (localStorage.getItem('token') !== null) {
+      return localStorage.getItem('token');
     } else {
-      return this.encryptService.get(
-        '123456$#@$^@1ERF',
-        localStorage.getItem('token'),
-      );
+      return 'Waiting...';
     }
   }
 

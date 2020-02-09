@@ -34,7 +34,7 @@
       },
       "label": {
         "password": "NEW PASSWORD TO CHOOSE",
-        "token": "TOKEN",
+        "token": "SECURITY TOKEN",
         "user_id": "ID DE USUARIO"
       },
       "messages": {
@@ -67,14 +67,13 @@
         "rememberme": "Remember me"
       },
       "messages": {
-        "account_activation": "Please first verify your account with the message that we have sent to your email. Once you do, the account login will be enabled.",
-        "incorrect_data": "Please complete the required fields to continue.",
-        "password_change": "Hmm, it seems that this account has a pending password change request. The process ends with the message that we have sent an email to send the login to the account again.",
-        "user_ban": "We are sorry but this user account has been suspended."
+        "empty_fields": "Please complete the required fields to continue.",
+        "error_processing_data": "We are sorry but we were unable to process your account information, please try again later.",
+        "error_sesion_log_out": "Oh no, we could not close the session that was opened from your user, please take a screenshot of this error to help you as soon as possible."
       },
       "title": {
-        "incorrect_data": "Incorrect data",
         "problem": "We have problems",
+        "we_have_problems": "We have problems",
         "welcome": "Welcome back"
       }
     },

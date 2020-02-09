@@ -34,7 +34,7 @@
       },
       "label": {
         "password": "NUEVA CONTRASEÑA A ELEGIR",
-        "token": "TOKEN",
+        "token": "TOKEN DE SEGURIDAD",
         "user_id": "ID DE USUARIO"
       },
       "messages": {
@@ -67,14 +67,13 @@
         "rememberme": "Recuerdame"
       },
       "messages": {
-        "account_activation": "Primero verifica tu cuenta con el mensaje que te hemos enviado a tu correo electrónico. Una vez que lo hagas, se habilitará el inicio de sesión de la cuenta.",
-        "incorrect_data": "Por favor completa los campos requeridos para continuar.",
-        "password_change": "Hmm, parece que esta cuenta tiene una solicitud de cambio de contraseña pendiente. Finaliza el proceso de cambio de contraseña con el mensaje que te hemos enviado y sigue los pasos indicados.",
-        "user_ban": "Lo sentimos pero esta cuenta de usuario ha sido suspendida."
+        "empty_fields": "Por favor completa los campos requeridos para continuar.",
+        "error_processing_data": "Lo sentimos, pero hemos podido procesar la información de su cuenta. Vuelva a intentarlo más tarde.",
+        "error_sesion_log_out": "Oh no, no hemos podido cerrar la sesion que se abrio de tu usuario, por favor toma captura de pantalla de este error para ayudarte lo mas pronto posible."
       },
       "title": {
-        "incorrect_data": "Datos incorrectos",
         "problem": "Tenemos problemas",
+        "we_have_problems": "Tenemos problemas",
         "welcome": "Bienvenido"
       }
     },

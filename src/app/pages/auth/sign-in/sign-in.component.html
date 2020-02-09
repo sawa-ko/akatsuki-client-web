@@ -29,7 +29,8 @@
                     {{ 'Pages.SignIn.label.email' | translate }}
                 </label>
                 <input [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" formControlName="email" class=" appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
-            focus:outline-none focus:bg-gray-800" type="email" placeholder="yourname@akatsukiapp.com">
+            focus:outline-none focus:bg-gray-800" type="email" placeholder="yourname@akatsukiapp.com"
+                    autocomplete="username">
             </div>
             <div>
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
@@ -37,7 +38,7 @@
                 </label>
                 <input [ngClass]="{'bg-gray-800': signInFormStatusDisabled}" formControlName="password"
                     class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-800"
-                    type="password" placeholder="**********">
+                    type="password" placeholder="**********" autocomplete="current-password">
             </div>
             <div>
                 <label class="flex items-center">
