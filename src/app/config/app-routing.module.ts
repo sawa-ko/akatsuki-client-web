@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from '../pages/welcome/welcome.component';
 import { CustomPreloadingStrategy } from '../utils/strategys/CustomPreloadingStrategy/custom-preloading-strategy';
 import { AuthGuard } from '../utils/guards/Auth/auth.guard';
-import { NotFoundComponent } from '../pages/NotFound/not-found/not-found.component';
+import { NotFoundComponent } from '../pages/not-found/not-found.component';
+import { AppErrorComponent } from '../pages/app-error/app-error.component';
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'not-found', component: NotFoundComponent },
+  { path: 'app-error', component: AppErrorComponent },
   {
     path: 'dashboard',
     canActivate: [AuthGuard],
@@ -29,6 +31,7 @@ const routes: Routes = [
     },
   },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 @NgModule({

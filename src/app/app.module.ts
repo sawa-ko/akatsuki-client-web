@@ -18,10 +18,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DeviceDetectorModule } from 'ngx-device-detector';
-import { NotFoundComponent } from './pages/NotFound/not-found/not-found.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AppErrorComponent } from './pages/app-error/app-error.component';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, NotFoundComponent],
+  declarations: [AppComponent, WelcomeComponent, NotFoundComponent, AppErrorComponent],
   imports: [
     DeviceDetectorModule.forRoot(),
     SidebarModule.forRoot(),
