@@ -16,10 +16,12 @@ We have a **structured version control**, in order to control how many changes, 
 
 For example we have this version **1.6.27.8**, this version is structured as follows.
 
-- 1. Number of major updates.
-- 6. Number of days elapsed since the last update.
-- 27. Number of new features added.
-- 8. Number of changes. Bug fixes and code improvements.
+```bash
+1. Number of major updates.
+6. Number of days elapsed since the last update.
+27. Number of new features added.
+8. Number of changes. Bug fixes and code improvements.
+```
 
 This version control applies to all version names of the application.
 
