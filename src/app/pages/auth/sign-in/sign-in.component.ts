@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import * as ip from 'public-ip';
-import { AuthService } from '../../../services/Auth/auth.service';
+import { AuthService } from '../../../services/auth/auth.service';
 import { SignInInterface } from '../../../utils/interfaces/auth/signin.interface';
 
 @Component({

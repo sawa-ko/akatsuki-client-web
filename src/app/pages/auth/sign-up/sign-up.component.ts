@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { AuthService } from '../../../services/Auth/auth.service';
+import { AuthService } from '../../../services/auth/auth.service';
 import { Router } from '@angular/router';
-import { TranslatationService } from '../../../services/Translation/translatation.service';
+import { TranslatationService } from '../../../services/translation/translatation.service';
 
 @Component({
   templateUrl: './sign-up.component.html',

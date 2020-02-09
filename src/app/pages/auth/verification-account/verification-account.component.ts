@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../../services/Auth/auth.service';
+import { AuthService } from '../../../services/auth/auth.service';
 import { Router } from '@angular/router';
-import { TranslatationService } from 'src/app/services/Translation/translatation.service';
+import { TranslatationService } from '../../../services/translation/translatation.service';
 
 @Component({
   templateUrl: './verification-account.component.html',

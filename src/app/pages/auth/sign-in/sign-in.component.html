@@ -61,10 +61,10 @@
             <div class="border border-gray-700 w-full h-px"></div>
         </div>
         <div class="p-3 w-full flex flex-col">
-            <button
-                class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded shadow w-full mb-2">{{ 'Pages.SignIn.button.recover_password' | translate }}</button>
-            <button
-                class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded shadow w-full">{{ 'Pages.SignIn.button.activate_account' | translate }}</button>
+            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded shadow w-full mb-2"
+                [routerLink]="[ '/auth/recover-password' ]">{{ 'Pages.SignIn.button.recover_password' | translate }}</button>
+            <button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded shadow w-full"
+                [routerLink]="[ '/auth/verify-account' ]">{{ 'Pages.SignIn.button.activate_account' | translate }}</button>
         </div>
     </div>
 </div>

@@ -23,6 +23,34 @@
         "we_have_problems": "We have problems"
       }
     },
+    "Recover_password": {
+      "button": {
+        "change_password": "Change password",
+        "request_change_password": "Send change confirmation"
+      },
+      "description": {
+        "important_note": "Remember that if you receive an email from us confirming that you change your password but you have not entered this page to complete the process, we recommend that you ignore it, since your password will not be changed if you do not share the Exchange Security Token sent to your email.",
+        "not_access_account": "This is very bad, we will recover your password. Please complete the required fields below to help you!"
+      },
+      "label": {
+        "password": "NEW PASSWORD TO CHOOSE",
+        "token": "TOKEN",
+        "user_id": "ID DE USUARIO"
+      },
+      "messages": {
+        "empty_fields": "Please complete the required fields to complete the registration.",
+        "empty_user_id_field": "Please complete the \"User ID\" field to send a password change confirmation email to the email associated with your account.",
+        "good_next_step": "Now enter the Change Security Token plus your new password to choose and press \"Change Password\" to finish the password change process."
+      },
+      "title": {
+        "access_account": "You can now access your account!",
+        "good_news": "Good news!",
+        "good_next_step": "Excellent, let's go to the following!",
+        "important_note": "Important note",
+        "not_access_account": "You can not access your account?",
+        "we_have_problems": "We have problems"
+      }
+    },
     "SignIn": {
       "button": {
         "activate_account": "Activate my account",
@@ -73,7 +101,7 @@
       "title": {
         "accept_terms": "I accept the terms and conditions",
         "lets_join": "Let's join!",
-        "we_habe_problems": "We have problems"
+        "we_have_problems": "We have problems"
       }
     },
     "Welcome": {

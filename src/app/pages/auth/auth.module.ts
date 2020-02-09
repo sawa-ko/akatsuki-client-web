@@ -8,9 +8,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { VerificationAccountComponent } from './verification-account/verification-account.component';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 
 @NgModule({
-  declarations: [SignInComponent, SignUpComponent, VerificationAccountComponent],
+  declarations: [SignInComponent, SignUpComponent, VerificationAccountComponent, RecoverPasswordComponent],
   imports: [
     CommonModule,
     TranslateModule,

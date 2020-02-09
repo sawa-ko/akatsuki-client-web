@@ -23,6 +23,34 @@
         "we_have_problems": "Tenemos problemas"
       }
     },
+    "Recover_password": {
+      "button": {
+        "change_password": "Cambiar contraseña",
+        "request_change_password": "Enviar confirmación de cambio"
+      },
+      "description": {
+        "important_note": "Recuerda que si recibes un correo de parte nuestra confirmando que cambies tu contraseña pero tu no has entrado a esta pagina a completar el proceso, te recomendamos ignorarlo, ya que tu contraseña no sera cambiada si no compartes el Token de seguridad de cambio enviado a tu correo electronico.",
+        "not_access_account": "Esto esta muy mal, vamos a recuperar tu contraseña. ¡Por favor completa los campos requeridos de abajo para poder ayudarte!"
+      },
+      "label": {
+        "password": "NUEVA CONTRASEÑA A ELEGIR",
+        "token": "TOKEN",
+        "user_id": "ID DE USUARIO"
+      },
+      "messages": {
+        "empty_fields": "Por favor completa los campos requeridos para completar el registro.",
+        "empty_user_id_field": "Por favor completa el campo \"Id de usuario\" para enviarte un correo de confirmacion de cambio de contraseña al correo electronico asociado a tu cuenta.",
+        "good_next_step": "Ahora ingresa el Token de seguridad de cambio mas tu nueva contraseña a elegir y presiona \"Cambiar contraseña\" para terminar el proceso de cambio de contraseña."
+      },
+      "title": {
+        "access_account": "¡Ya puedes acceder a tu cuenta!",
+        "good_news": "¡Buenas noticias!",
+        "good_next_step": "¡Excelente, vamos a lo siguiente!",
+        "important_note": "Nota importante",
+        "not_access_account": "¿No puedes acceder a tu cuenta?",
+        "we_have_problems": "Tenemos problemas"
+      }
+    },
     "SignIn": {
       "button": {
         "activate_account": "Activar mi cuenta",
@@ -73,7 +101,7 @@
       "title": {
         "accept_terms": "Acepto los términos y condiciones",
         "lets_join": "¡Vamos a unirnos!",
-        "we_habe_problems": "Tenemos problemas"
+        "we_have_problems": "Tenemos problemas"
       }
     },
     "Welcome": {

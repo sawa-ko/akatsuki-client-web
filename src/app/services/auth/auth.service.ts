@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { EncryptService } from '../Encrypt/encrypt.service';
+import { EncryptService } from '../encrypt/encrypt.service';
 import { SignInInterface } from '../../utils/interfaces/auth/signin.interface';
 import { SignUpInterface } from '../../utils/interfaces/auth/signup.interface';
 import { ActivactionInterface } from '../../utils/interfaces/auth/activation.interface';
+import { RequestResetPasswordInterface } from '../../utils/interfaces/auth/request_reset_password.interface';
+import { ChangePasswordInterface } from '../../utils/interfaces/auth/change_password.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -27,6 +29,20 @@ export class AuthService {
     return this.httpClient.patch(
       `${environment.api}/auth/account/verify/email`,
       activactionData,
+    );
+  }
+
+  public changePassword(changePasswordData: ChangePasswordInterface) {
+    return this.httpClient.patch(
+      `${environment.api}/auth/account/password/change`,
+      changePasswordData,
+    );
+  }
+
+  public requestPassword(resetPasswordData: RequestResetPasswordInterface) {
+    return this.httpClient.post(
+      `${environment.api}/auth/account/password/reset`,
+      resetPasswordData,
     );
   }
 
