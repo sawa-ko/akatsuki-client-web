@@ -10,6 +10,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 The web client is used to use the services of Akatsuki Project in a browser of any device, and also serves to process transactions, web services that Android and IOS application clients need and, among other aspects.
 
+## Version control structure
+
+We have a **structured version control**, in order to control how many changes, corrections, new features have been added to the application since its previous update. We will explain an example of how version control is structured.
+
+For example we have this version **1.6.27.8**, this version is structured as follows.
+
+- 1. Number of major updates.
+- 6. Number of days elapsed since the last update.
+- 27. Number of new features added.
+- 8. Number of changes. Bug fixes and code improvements.
+
+This version control applies to all version names of the application.
+
 ## Important notes
 
 - The tests must be executed with the authorization of the administrator and all events, problems or actions carried out with the client must be informed.
