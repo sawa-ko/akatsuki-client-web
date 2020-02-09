@@ -5,7 +5,6 @@ import * as ip from 'public-ip';
 import { AuthService } from '../../../services/auth/auth.service';
 import { SignInInterface } from '../../../utils/interfaces/auth/signin.interface';
 import { Router } from '@angular/router';
-import { EncryptService } from '../../../services/encrypt/encrypt.service';
 import { TranslationService } from '../../../services/translation/translatation.service';
 
 @Component({
@@ -25,7 +24,6 @@ export class SignInComponent implements OnInit {
     private readonly deviceService: DeviceDetectorService,
     private readonly authService: AuthService,
     private readonly router: Router,
-    private readonly encryptService: EncryptService,
     private readonly translationService: TranslationService,
   ) {
     this.signInForm = this.formBuilder.group({
@@ -81,13 +79,13 @@ export class SignInComponent implements OnInit {
     return this.authService.signIn(data).subscribe({
       next: (response: any) => {
         localStorage.setItem('id', response.user_id);
-        localStorage.setItem('session_id', response.session_id);
+        localStorage.setItem('session', response.session_id);
         localStorage.setItem('token', response.token);
 
         setTimeout(() => {
           if (
             localStorage.getItem('id') !== null &&
-            localStorage.getItem('session_id') !== null &&
+            localStorage.getItem('session') !== null &&
             localStorage.getItem('token') !== null
           ) {
             this.router.navigate(['/dashboard']);

@@ -12,6 +12,14 @@ const routes: Routes = [
   { path: 'not-found', component: NotFoundComponent },
   { path: 'app-error', component: AppErrorComponent },
   {
+    path: 'auth',
+    loadChildren: () =>
+      import('../pages/auth/auth.module').then(m => m.AuthModule),
+    data: {
+      preload: true,
+    },
+  },
+  {
     path: 'dashboard',
     canActivate: [AuthGuard],
     loadChildren: () =>
@@ -20,14 +28,6 @@ const routes: Routes = [
       ),
     data: {
       preload: false,
-    },
-  },
-  {
-    path: 'auth',
-    loadChildren: () =>
-      import('../pages/auth/auth.module').then(m => m.AuthModule),
-    data: {
-      preload: true,
     },
   },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },

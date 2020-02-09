@@ -3,25 +3,20 @@
         [ngClass.xs]="{'flex-col': true}">
         <div class="w-1/2 flex flex-col" [ngClass.xs]="{'w-full': true}">
             <h3 class="text-white font-bold text-4xl" [ngClass.xs]="{'mx-2': true}">
-                Lo sentimos, pero te hemos fallado
+                {{ 'Pages.App_error.title.we_have_problems' | translate }}
             </h3>
             <p class="text-white text-base" [ngClass.xs]="{'mx-2': true}">
-                Nuestra aplicacion ha detectado que lo que intentas hacer no lo ha podido controlar, por lo que te ha
-                mandado aqui, pues, para que nos informes acerca del error para poder repararlo.
+                {{ 'Pages.App_error.description.we_have_problems_1' | translate }}
             </p>
             <p class="text-white text-base mt-4" [ngClass.xs]="{'mx-2': true}">
-                Recuerda que una vez dentro del servidor en Discord por favor crea un Ticket para el problema necesario
-                y espera a
-                que un administrador se ponga en contacto contigo para poder resolver este problema y que no pase de
-                nuevo.
+                {{ 'Pages.App_error.description.we_have_problems_2' | translate }}
             </p>
             <div class="w-auto flex flex-row mt-10">
                 <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2 w-full">
-                    Reportar problema
+                    {{ 'Pages.App_error.button.report' | translate }}
                 </button>
-                <button [routerLink]="[ '/welcome' ]" class="hover:bg-gray-700 text-white py-2 px-4 rounded w-full">Ir
-                    al
-                    inicio</button>
+                <button [routerLink]="[ '/welcome' ]"
+                    class="hover:bg-gray-700 text-white py-2 px-4 rounded w-full">{{ 'Pages.App_error.button.go_to_home' | translate }}</button>
             </div>
         </div>
         <img src="../../../assets/app-error/main.svg" alt="www.akatsukiapp.com" width="512" height="512"

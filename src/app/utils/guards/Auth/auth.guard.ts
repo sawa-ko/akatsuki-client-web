@@ -33,11 +33,10 @@ export class AuthGuard implements CanActivate {
           userId: localStorage.getItem('id'),
           sessioId: localStorage.getItem('session'),
           sessionIp: await ip.v4(),
-          sessionDevice: this.deviceService.getDeviceInfo().os_version,
+          sessionDevice: this.deviceService.getDeviceInfo().userAgent,
         })
         .subscribe({
           next: () => {
-            this.router.navigate(['dashboard']);
             res(true);
           },
           error: () => {

@@ -23,6 +23,32 @@
         "we_have_problems": "We have problems"
       }
     },
+    "App_error": {
+      "button": {
+        "go_to_home": "Go to home",
+        "report": "Report problem"
+      },
+      "description": {
+        "we_have_problems_1": "Our application has detected that what you are trying to do has not been able to control it, so it has sent you here, then, to inform us about the error in order to repair it.",
+        "we_have_problems_2": "Remember that once inside the server in Discord please create a Ticket for the necessary problem and wait for an administrator to contact you to be able to solve this problem and not to happen again."
+      },
+      "title": {
+        "we_have_problems": "Sorry, but we failed you"
+      }
+    },
+    "Not_found": {
+      "button": {
+        "go_to_home": "Go to home",
+        "report": "Report problem"
+      },
+      "description": {
+        "we_have_problems_1": "We are sorry but the page you are looking for does not exist in the application. Please be sure to write the URL well, but if the application redirects you to this place, please contact us to resolve it as soon as possible.",
+        "we_have_problems_2": "Remember that once inside the server in Discord please create a Ticket for the necessary problem and wait for an administrator to contact you to be able to solve this problem and not to happen again."
+      },
+      "title": {
+        "we_have_problems": "Oh no, you're looking for something that doesn't exist in the universe..."
+      }
+    },
     "Recover_password": {
       "button": {
         "change_password": "Change password",

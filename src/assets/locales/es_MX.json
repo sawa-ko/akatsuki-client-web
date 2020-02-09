@@ -23,6 +23,32 @@
         "we_have_problems": "Tenemos problemas"
       }
     },
+    "App_error": {
+      "button": {
+        "go_to_home": "Ir al inicio",
+        "report": "Reportar problema"
+      },
+      "description": {
+        "we_have_problems_1": "Nuestra aplicación ha detectado que lo que estás intentando hacer no ha podido controlarlo, por lo que te ha enviado aquí para informarnos sobre el error y repararlo.",
+        "we_have_problems_2": "Recuerda que una vez dentro del servidor en Discord, crea un Ticket para el problema necesario y espera a que un administrador se comunique contigo para poder resolver este problema y no volver a ocurrir."
+      },
+      "title": {
+        "we_have_problems": "Lo sentimos, pero te fallamos"
+      }
+    },
+    "Not_found": {
+      "button": {
+        "go_to_home": "Ir al inicio",
+        "report": "Reportar problema"
+      },
+      "description": {
+        "we_have_problems_1": "Lo sentimos, pero la página que buscas no existe en la aplicación. Asegúrate de escribir bien la URL, pero si la aplicación te redirige a este lugar, contáctanos para resolverlo lo antes posible.",
+        "we_have_problems_2": "Recuerda que una vez dentro del servidor en Discord, crea un Ticket para el problema necesario y espera a que un administrador se comunique contigo para poder resolver este problema y no volver a ocurrir."
+      },
+      "title": {
+        "we_have_problems": "Oh no, estás buscando algo que no existe en el universo..."
+      }
+    },
     "Recover_password": {
       "button": {
         "change_password": "Cambiar contraseña",
