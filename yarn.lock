@@ -145,7 +145,7 @@
     ora "4.0.2"
     rxjs "6.5.3"
 
-"@angular/animations@~9.0.0":
+"@angular/animations@^9.0.0":
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.0.0.tgz#8d2b852c5273bcc161d13f82faaf3566ab562951"
   integrity sha512-jB8+SC3vMztW5zt5UYVmtVwqIWE33UyEjbP5JPba3I3bLRK5E059LcJmN1rSdJHItgIAdG9Y1I0WJ6aiSFyp4Q==
@@ -5911,6 +5911,11 @@ ngx-quicklink@^0.2.0:
   integrity sha512-9Y0SS997WW0My4W6xWwDYBMWYVphictDIMkwXWMo7d3Pzzje6ZVVDXuIkcsW89wqvyGJfH1E8PoS2fsgZA1I2Q==
   dependencies:
     tslib "^1.9.0"
+
+ngx-toastr@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-toastr/-/ngx-toastr-12.0.0.tgz#1b35a4e5b785246c558e091c831a26ebf211cfd7"
+  integrity sha512-J0mvGXH9cLlP3acoLJcuYhsQcL+EOAtkS1Y5tFKzrw2TYqY2HNffMVPvK+KP1LDJHiIgRpYg3ZELw1raAl0R/A==
 
 nice-try@^1.0.4:
   version "1.0.5"

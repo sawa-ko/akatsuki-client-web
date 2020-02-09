@@ -24,7 +24,11 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss", "src/tailwind.scss"],
+            "styles": [
+              "src/styles.scss",
+              "src/tailwind.scss",
+              "node_modules/ngx-toastr/toastr.css"
+            ],
             "scripts": ["node_modules/crypto-js/crypto-js.js"],
             "customWebpackConfig": {
               "path": "webpack.config.js"
