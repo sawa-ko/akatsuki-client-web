@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { HttpInterceptorG } from './utils/interceptors/http/http-interceptor-g';
-import { AuthModule } from './pages/auth/auth.module';
 import { SidebarModule } from 'ng-sidebar';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -42,7 +41,6 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     AppRoutingModule,
     RouterModule,
     FlexLayoutModule,
-    AuthModule.forRoot(),
   ],
   providers: [
     {

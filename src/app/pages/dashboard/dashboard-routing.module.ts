@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: MainComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class HomeRoutingModule {}
+export class DashboardRoutingModule {}

@@ -9,7 +9,9 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('../pages/home/home.module').then(m => m.HomeModule),
+      import('../pages/dashboard/dashboard.module').then(m =>
+        m.DashboardModule.forRoot(),
+      ),
     data: {
       preload: false,
     },
@@ -17,7 +19,7 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () =>
-      import('../pages/auth/auth.module').then(m => m.AuthModule),
+      import('../pages/auth/auth.module').then(m => m.AuthModule.forRoot()),
     data: {
       preload: false,
     },
