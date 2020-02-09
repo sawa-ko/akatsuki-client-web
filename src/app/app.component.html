@@ -31,14 +31,27 @@
                     Project</span>
             </div>
             <div class="w-64 block flex-grow lg:flex lg:items-center lg:w-auto" fxHide.xs="true">
-                <div class="text-sm lg:flex-grow">
+                <div *ngIf="!this.authService.isLoggedIn" class="text-sm lg:flex-grow">
                     <button class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2"
-                        [routerLink]="[ '/auth' ]">Dashboard</button>
+                        [routerLink]="[ '/auth/sign-in' ]">Sign In</button>
                     <button
                         class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2">Community
                         guidelines</button>
                     <button
                         class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2">Terms</button>
+                </div>
+                <div *ngIf="this.authService.isLoggedIn" class="text-sm lg:flex-grow">
+                    <button class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2"
+                        [routerLink]="[ '/dashboard' ]">Dashboard</button>
+                    <button
+                        class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2">New
+                        post</button>
+                    <button
+                        class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2">New
+                        product</button>
+                    <button
+                        class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-2">My
+                        stats</button>
                 </div>
                 <div class="relative text-gray-600 mr-4 w-1/2">
                     <input type="search" placeholder="Tell us what you would like to look for..."

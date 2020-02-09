@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Injectable({
   providedIn: 'root',
 })
-export class TranslatationService {
+export class TranslationService {
   constructor(private readonly translateService: TranslateService) {}
 
   public getTranslate(key: string) {

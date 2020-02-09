@@ -8,8 +8,14 @@ import { RecoverPasswordComponent } from './recover-password/recover-password.co
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'verify-account', component: VerificationAccountComponent },
-  { path: 'recover-password', component: RecoverPasswordComponent },
+  {
+    path: 'verify-account',
+    component: VerificationAccountComponent,
+  },
+  {
+    path: 'recover-password',
+    component: RecoverPasswordComponent,
+  },
   {
     path: '',
     component: SignInComponent,

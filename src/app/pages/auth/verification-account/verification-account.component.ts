@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth/auth.service';
 import { Router } from '@angular/router';
-import { TranslatationService } from '../../../services/translation/translatation.service';
+import { TranslationService } from '../../../services/translation/translatation.service';
 
 @Component({
   templateUrl: './verification-account.component.html',
@@ -24,7 +24,7 @@ export class VerificationAccountComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly authService: AuthService,
     private readonly router: Router,
-    private readonly translationService: TranslatationService,
+    private readonly translationService: TranslationService,
   ) {
     this.activationAccountForm = this.formBuilder.group({
       id: ['', Validators.required],

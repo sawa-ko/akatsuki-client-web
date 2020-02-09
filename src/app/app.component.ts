@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from './services/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ export class AppComponent {
   private langs: string[] = [];
   private _opened: boolean = false;
 
-  constructor(private readonly translateService: TranslateService) {
+  constructor(
+    private readonly translateService: TranslateService,
+    private readonly authService: AuthService,
+  ) {
     if (localStorage.getItem('lang') !== null) {
       this.translateService.use(localStorage.getItem('lang'));
       this.langDefault = localStorage.getItem('lang');

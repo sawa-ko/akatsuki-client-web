@@ -6,7 +6,7 @@ import { AuthService } from '../../../services/auth/auth.service';
 import { SignInInterface } from '../../../utils/interfaces/auth/signin.interface';
 import { Router } from '@angular/router';
 import { EncryptService } from '../../../services/encrypt/encrypt.service';
-import { TranslatationService } from '../../../services/translation/translatation.service';
+import { TranslationService } from '../../../services/translation/translatation.service';
 
 @Component({
   templateUrl: './sign-in.component.html',
@@ -26,7 +26,7 @@ export class SignInComponent implements OnInit {
     private readonly authService: AuthService,
     private readonly router: Router,
     private readonly encryptService: EncryptService,
-    private readonly translationService: TranslatationService,
+    private readonly translationService: TranslationService,
   ) {
     this.signInForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -90,7 +90,7 @@ export class SignInComponent implements OnInit {
             localStorage.getItem('session_id') !== null &&
             localStorage.getItem('token') !== null
           ) {
-            this.router.navigate(['/home']);
+            this.router.navigate(['/dashboard']);
           } else {
             this.errorSignIn = true;
             this.errorSignInTitle = this.translationService.getTranslate(

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { AuthService } from '../../../services/auth/auth.service';
 import { Router } from '@angular/router';
-import { TranslatationService } from '../../../services/translation/translatation.service';
+import { TranslationService } from '../../../services/translation/translatation.service';
 
 @Component({
   templateUrl: './sign-up.component.html',
@@ -22,7 +22,7 @@ export class SignUpComponent implements OnInit {
     private readonly deviceService: DeviceDetectorService,
     private readonly authService: AuthService,
     private readonly router: Router,
-    private readonly translationService: TranslatationService,
+    private readonly translationService: TranslationService,
   ) {
     this.signUpForm = this.formBuilder.group({
       name: [
