@@ -1,3 +1,15 @@
 .iconify {
   color: #f7fafc;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #a0aec0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 10px;
+}

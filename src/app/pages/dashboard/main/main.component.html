@@ -1,1 +1,493 @@
-<p>main works!</p>
+<div class="flex flex-col container mx-auto">
+    <div class="carousel-inner relative overflow-hidden w-full rounded-lg">
+        <!--Slide 1-->
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+            checked="checked">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="block h-full w-full text-white text-5xl text-center" style="background-image: url('../../../../assets/placeholders/cover.jpg'); background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;"></div>
+        </div>
+        <label for="carousel-3"
+            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-2"
+            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+        <!--Slide 2-->
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center" style="background-image: url('../../../../assets/placeholders/cover.jpg');  background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;"></div>
+        </div>
+        <label for="carousel-1"
+            class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-3"
+            class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+        <!--Slide 3-->
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="block h-full w-full bg-green-500 text-white text-5xl text-center" style="background-image: url('../../../../assets/placeholders/cover.jpg');  background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;"></div>
+        </div>
+
+        <!-- Controlls -->
+        <label for="carousel-2"
+            class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-1"
+            class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+        <!-- Add additional indicators for each slide-->
+        <ol class="carousel-indicators">
+            <li class="inline-block mr-3">
+                <label for="carousel-1"
+                    class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+            </li>
+            <li class="inline-block mr-3">
+                <label for="carousel-2"
+                    class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+            </li>
+            <li class="inline-block mr-3">
+                <label for="carousel-3"
+                    class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+            </li>
+        </ol>
+    </div>
+    <div class="flex-row flex mt-2" [ngClass.xs]="{'flex-col': true}">
+        <div class="mr-6 w-1/5">
+            <div class="bg-gray-900 p-3 rounded-lg">
+                <p class="text-white font-bold">
+                    Categories
+                </p>
+                <div class="border border-gray-700 w-full h-px"></div>
+                <ul class="mb-3">
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="ant-design:home-filled" data-inline="false"></span>
+                            <span class="ml-2">Home</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="el:shopping-cart" data-inline="false"></span>
+                            <span class="ml-2">New products</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="map:shopping-mall" data-inline="false"></span>
+                            <span class="ml-2">But sold</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="emojione:glowing-star" data-inline="false"></span>
+                            <span class="ml-2">Galaxy Products</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 p-3 mt-3 rounded-lg">
+                <p class="text-white font-bold">
+                    Markets
+                </p>
+                <div class="border border-gray-700 w-full h-px"></div>
+                <ul class="mb-3">
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="mdi:account-box-multiple"
+                                data-inline="false"></span>
+                            <span class="ml-2">Accounts</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="ic:sharp-account-tree" data-inline="false"></span>
+                            <span class="ml-2">Methods</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="bx:bxs-book-bookmark" data-inline="false"></span>
+                            <span class="ml-2">Guides</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="mdi:netflix" data-inline="false"></span>
+                            <span class="ml-2">Bin's</span>
+                        </a>
+                    </li>
+                    <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                        <a href="#" class="flex items-center my-2 px-2 py-1">
+                            <span class="iconify text-xl" data-icon="fa-solid:credit-card" data-inline="false"></span>
+                            <span class="ml-2">CC's (Soon)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 p-3 mt-3 rounded-lg">
+                <p class="text-white font-bold">
+                    Best 10 sellers
+                </p>
+                <div class="border border-gray-700 w-full h-px"></div>
+                <ul>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row mt-2">
+                        <img class="rounded-full mr-2 h-10 w-10" src="../../../../assets/sign-in/background-sign-in.jpg"
+                            alt="www.akatsukiapp.com">
+                        <div class="flex flex-col">
+                            <h3 class="font-light text-sm text-white">
+                                @username
+                            </h3>
+                            <p class="text-sm text-white">
+                                Reputation total: 100
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-4/5">
+            <h2 class="text-white font-light text-3xl">
+                Recent
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-4"></div>
+            <div class="grid grid-columns-4 grid-gap-3 w-full" [ngClass.xs]="{'grid-columns-1': true}">
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-600 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-600 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-600 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-600 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-600 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-700 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-700 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col" style="max-width: 15.5rem;">
+                    <img class="rounded-lg" src="../../../../assets/sign-in/background-sign-in.jpg"
+                        alt="www.akatsukiapp.com" height="8rem" width="100%">
+                    <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3"
+                        src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com">
+                    <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+                        <h2 class="text-white font-light text-sm">
+                            Title product
+                        </h2>
+                        <h2 class="text-white font-bold text-base">
+                            10$US
+                        </h2>
+                        <div class="border border-gray-700 w-full h-px mb-2"></div>
+                        <p class="text-gray-700 text-sm description-product">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Mollitia
+                            officia, et sit quam
+                            pariatur sed consequuntur, minima iste cum esse rerum eum numquam ex inventore consequatur?
+                            Corrupti dolorum autem laudantium.</p>
+                    </div>
+                    <div class="w-full flex flex-row mt-2">
+                        <button
+                            class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

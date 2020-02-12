@@ -8439,6 +8439,11 @@ symbol-observable@1.2.0:
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
+tailwindcss-grid@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-grid/-/tailwindcss-grid-1.2.1.tgz#44d6310f754078b1a49fa30d0a4dfd69d09a4413"
+  integrity sha512-H/IjlRgREBUbBz3hlC+inGX45S8qx3T6pIY3aa2MJuy85tiSUk5BsdJDmkoCNA3HWfIyL1+NFJSgKyv+ADOJFw==
+
 tailwindcss-schematic@^0.3.7:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/tailwindcss-schematic/-/tailwindcss-schematic-0.3.7.tgz#f3a8c825871025e4f60d308849ec03fc2d18b9f3"

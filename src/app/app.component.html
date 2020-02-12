@@ -1,25 +1,134 @@
-<ng-sidebar-container style="height: 100vh;">
-    <ng-sidebar [(opened)]="_opened" (onBackdropClicked)="_toggleSidebar()" keyClose="true" closeOnClickOutside="true"
-        closeOnClickBackdrop="true" showBackdrop="true" animate="true" [sidebarClass]="'flex flex-col bg-gray-900'">
-        <p class="text-white font-medium m-1">Ayuda</p>
-        <div class="border border-gray-600"></div>
-        <button
-            class="text-sm hover:bg-blue-700 text-blue-400 font-semibold py-2 px-4 rounded shadow m-1 text-left w-64">Community
-            Principles</button>
-        <button
-            class="text-sm hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow m-1 text-left w-64">Terms
-            and
-            Conditions</button>
-        <button
-            class="text-sm hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow m-1 text-left w-64">Privacy
-            Policy</button>
+<ng-sidebar-container class="overflow-auto" style="height: 100vh;">
+    <ng-sidebar autoFocus="false" mode="slide" [(opened)]="_opened" (onBackdropClicked)="_toggleSidebar()"
+        keyClose="true" closeOnClickOutside="true" closeOnClickBackdrop="true" showBackdrop="true" animate="true"
+        [sidebarClass]="'flex flex-col bg-gray-900 p-2 w-64'">
+        <div class="text-center">
+            <img src="../../../../assets/sign-in/background-sign-in.jpg" alt="www.akatsukiapp.com" width="100"
+                height="100" class="rounded-full">
+            <h2 class="text-white font-light mt-6">
+                [ Nombre publico ]
+            </h2>
+            <h2 class="text-white font-light">
+                [ Especialidad ]
+            </h2>
+        </div>
+        <div class="pr-2">
+            <p class="text-white font-bold mt-4">
+                Opciones de cuenta
+            </p>
+            <div class="border border-gray-700 w-full h-px"></div>
+            <ul class="py-3">
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Personalizar</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Mis estadisticas</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Mis transacciones</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Membresia Galaxia</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Soporte</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-white font-bold mt-4">
+                Mercado
+            </p>
+            <div class="border border-gray-700 w-full h-px"></div>
+            <ul class="py-3">
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Nuevos productos</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Bin's</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Cuentas</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Metodos</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Guias</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-white font-bold mt-4">
+                Mercado
+            </p>
+            <div class="border border-gray-700 w-full h-px"></div>
+            <ul class="py-3">
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Nuevos productos</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Bin's</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Cuentas</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Metodos</span>
+                    </a>
+                </li>
+                <li class="bg-gray-800 text-gray-500 hover:text-gray-200 hover:bg-gray-700 rounded">
+                    <a href="#" class="flex items-center my-2 px-2 py-1">
+                        <span class="text-xl">#</span>
+                        <span class="ml-2">Guias</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </ng-sidebar>
 
     <div ng-sidebar-content>
         <ngx-loading-bar color="#e2e8f0"></ngx-loading-bar>
-        <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-5 fixed w-full">
+        <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-5 fixed w-full z-50">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <button fxHide fxShow.xs="true" (click)="_toggleSidebar()"
+                <button (click)="_toggleSidebar()"
                     class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded shadow mr-4">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
