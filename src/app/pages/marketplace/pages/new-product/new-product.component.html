@@ -1,0 +1,107 @@
+<div class="container flex flex-col bg-gray-900 rounded p-4">
+    <div class="flex flex-row items-center w-full">
+        <p class="text-white font-bold" style="width: 15%;">
+            Sell new product
+        </p>
+        <div class=" border border-gray-700 h-px" style="width: 85%;">
+        </div>
+    </div>
+    <p class="text-gray-500 text-base">
+        Complete the form to complete the process of publishing a new product in the store that choose Remember that
+        your product will be reviewed before being published, and if it violates the principles of community your
+        product will be removed, if not, then it will appear in the store.
+    </p>
+    <div class="flex flex-row mt-4">
+        <div class="w-2/5 mr-2">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Product name
+            </label>
+            <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
+                [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+            focus:outline-none focus:bg-gray-800" type="text" placeholder="Netflix account 1 month" #inputName>
+            <div class="text-right w-full">
+                <p class="text-gray-500 text-xs italic">{{ inputName.value?.length || 0 }}/30 (min 5)</p>
+            </div>
+        </div>
+        <div class="w-3/5">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Product description
+            </label>
+            <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
+                [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+            focus:outline-none focus:bg-gray-800" type="text"
+                placeholder="Netflix is a streaming service that allows our members to watch a wide variety of award-winning TV shows, movies, documentaries, and more on thousands of internet-connected devices. With Netflix, you can enjoy unlimited ad-free viewing of our content."
+                #inputDescription>
+            <div class="text-right w-full">
+                <p class="text-gray-500 text-xs italic">{{ inputName.value?.length || 0 }}/30 (min 5)</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-row">
+        <div class="w-full mr-2">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Price
+            </label>
+            <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
+                [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 leading-tight
+            focus:outline-none focus:bg-gray-800" type="number" min="0" max="9999" placeholder="0">
+        </div>
+        <div class="w-full mr-2">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Market
+            </label>
+            <select class="form-select mt-1 bg-gray-700 block w-full border-0 text-white">
+                <option>Accounts</option>
+                <option>Methods</option>
+                <option>Bin's</option>
+                <option>Guides</option>
+                <option>Sql injection</option>
+                <option>Others</option>
+            </select>
+        </div>
+        <div class="w-full mr-2">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Will you have a discount?
+            </label>
+            <select class="form-select mt-1 bg-gray-700 block w-full border-0 text-white"
+                [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}"
+                [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}">
+                <option>Please select an option</option>
+                <option>Yes, I would like to add a discount.</option>
+                <option>No, I want to sell my product at its price.</option>
+            </select>
+        </div>
+        <div class="w-full">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                Percentage discount
+            </label>
+            <input [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
+                [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 leading-tight
+            focus:outline-none focus:bg-gray-800" type="number" min="0" max="99" placeholder="0">
+        </div>
+    </div>
+    <div class="w-full mt-4">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold">
+            Product content
+        </label>
+        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
+            Enter the content that users will buy
+        </label>
+        <textarea [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" formControlName="name"
+            [ngClass]="{'bg-gray-800': signUpFormStatusDisabled}" class="appearance-none block w-full bg-gray-700 text-white rounded py-3 px-4 mb-3 leading-tight
+        focus:outline-none focus:bg-gray-800" placeholder="Sawako" #inputName></textarea>
+        <div class="text-right w-full">
+            <p class="text-gray-500 text-xs italic">{{ inputName.value?.length || 0 }}/30 (min 5)</p>
+        </div>
+    </div>
+    <div class="w-full flex items-center justify-end">
+        <div class="w-64 flex flex-row mt-4">
+            <button class="bg-gray-700 hover:bg-gray-500 text-white py-2 px-4 rounded w-full mr-2"
+                [routerLink]="[ '/marketplace' ]">Cancel</button>
+            <button [ngClass]="{'bg-gray-800': signInFormStatusDisabled, 'hover:bg-gray-800': signInFormStatusDisabled}"
+                class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Publish
+            </button>
+        </div>
+    </div>
+</div>

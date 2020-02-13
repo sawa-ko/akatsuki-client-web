@@ -1,0 +1,279 @@
+<h2 class="text-white font-light text-3xl">
+    Recent
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketMethods.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketMethods.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <div class="flex flex-col mb-4" style="max-width: 15.5rem;"
+        *ngFor="let product of productsMarketMethods | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+    </div>
+</div>
+<h2 class="text-white font-light text-3xl">
+    Accounts
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketAccounts.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketAccounts.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <div class="flex flex-col mb-4" style="max-width: 15.5rem;"
+        *ngFor="let product of productsMarketAccounts | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+    </div>
+</div>
+<h2 class="text-white font-light text-3xl">
+    Methods
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketMethods.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketMethods.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <<div class="flex flex-col mb-4" style="max-width: 15.5rem;"
+        *ngFor="let product of productsMarketMethods | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+</div>
+</div>
+<h2 class="text-white font-light text-3xl">
+    Guides
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketGuides.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketGuides.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <div class="flex flex-col mb-4" style="max-width: 15.5rem;"
+        *ngFor="let product of productsMarketGuides | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+    </div>
+</div>
+<h2 class="text-white font-light text-3xl">
+    Bin's
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketBins.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketBins.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <div class="flex flex-col mb-4" style="max-width: 15.5rem;"
+        *ngFor="let product of productsMarketBins | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+    </div>
+</div>
+<h2 class="text-white font-light text-3xl">
+    SQL injection
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketSql.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketSql.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <div class="flex flex-col mb-4" style="max-width: 15.5rem;" *ngFor="let product of productsMarketSql | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+    </div>
+</div>
+<h2 class="text-white font-light text-3xl">
+    Others
+</h2>
+<div class="border border-gray-700 w-full h-px mb-4"></div>
+<div *ngIf="productsMarketOther.length === 0" class="flex flex-col items-center justify-center w-full p-4">
+    <img src="../../../../assets/marketplace/empty.svg" alt="www.akatsukiapp.com" width="220" height="220">
+    <h1 class="text-white font-light text-3xl">
+        No tenemos productos aquí
+    </h1>
+    <p class="text-white text-base w-2/4">
+        Lo sentimos pero nadie ha publicado aqui aun, parece estar muy vacio, si eres vendedor, ¿Por que no vendes
+        algo
+        en este mercado?
+    </p>
+</div>
+<div *ngIf="productsMarketOther.length >= 1" class="grid grid-columns-4 grid-gap-3 w-full"
+    [ngClass.xs]="{'grid-columns-1': true}">
+    <div class="flex flex-col mb-4" style="max-width: 15.5rem;"
+        *ngFor="let product of productsMarketOther | slice:0:16;">
+        <img class="rounded-lg" [src]="product.author.cover" alt="www.akatsukiapp.com" height="8rem" width="100%">
+        <img class="rounded-full border-8 border-gray-900 h-20 w-20 -mt-10 z-10 ml-3" [src]="product.author.photo"
+            alt="www.akatsukiapp.com">
+        <div class="-mt-10 pt-10 px-4 pb-4 bg-gray-900 rounded">
+            <h2 class="text-white font-light text-sm">
+                {{ product.title }}
+            </h2>
+            <h2 class="text-white font-bold text-base">
+                {{ product.price }} Tachis
+            </h2>
+            <div class="border border-gray-700 w-full h-px mb-2"></div>
+            <p class="text-gray-600 text-sm description-product">{{ product.description }}
+        </div>
+        <div class="w-full flex flex-row mt-2">
+            <button class="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded w-full mr-2">Seller</button>
+            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded w-full">
+                Buy
+            </button>
+        </div>
+    </div>
+</div>

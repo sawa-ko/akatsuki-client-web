@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'marketplace',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('../pages/marketplace/marketplace.module').then(
         m => m.MarketplaceModule,

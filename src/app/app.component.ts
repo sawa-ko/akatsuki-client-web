@@ -28,8 +28,6 @@ export class AppComponent {
       localStorage.setItem('lang', 'en_US');
     }
 
-    console.log(this.location.path().search('/dashboard'));
-
     this.translateService.setDefaultLang('en_US');
     this.translateService.addLangs(['es_MX', 'en_US']);
     this.langs = this.translateService.getLangs();

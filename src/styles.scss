@@ -13,3 +13,21 @@
   background: #2d3748;
   border-radius: 10px;
 }
+
+.link-active {
+  color: #edf2f7;
+  background-color: #4a5568;
+}
+
+/* Remove control for Input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

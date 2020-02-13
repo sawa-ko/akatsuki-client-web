@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -44,7 +43,6 @@ import { AppErrorComponent } from './pages/app-error/app-error.component';
       },
       isolate: true,
     }),
-    CommonModule,
     LoadingBarHttpClientModule,
     LoadingBarRouterModule,
     LoadingBarModule,
