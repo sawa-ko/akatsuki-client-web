@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from './services/auth/auth.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,12 @@ export class AppComponent {
   private langDefault: string;
   private langs: string[] = [];
   private _opened: boolean = false;
+  private showDashboard: boolean = false;
 
   constructor(
     private readonly translateService: TranslateService,
     private readonly authService: AuthService,
+    private location: Location,
   ) {
     if (localStorage.getItem('lang') !== null) {
       this.translateService.use(localStorage.getItem('lang'));
@@ -24,6 +27,8 @@ export class AppComponent {
       this.langDefault = 'en_US';
       localStorage.setItem('lang', 'en_US');
     }
+
+    console.log(this.location.path().search('/dashboard'));
 
     this.translateService.setDefaultLang('en_US');
     this.translateService.addLangs(['es_MX', 'en_US']);

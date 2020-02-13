@@ -1,21 +1,76 @@
-<section class="container mx-auto rounded h-auto bg-gray-900 p-4 flex justify-between shadow"
-    [ngClass.xs]="{'flex-col': true, 'justify-center': true}">
-    <div class="flex flex-col w-1/2" [ngClass.xs]="{'w-full': true}">
-        <p class="text-white font-bold text-4xl">{{ 'Pages.Welcome.title.welcome' | translate }}</p>
-        <p class="text-gray-400 text-base mt-2">{{ 'Pages.Welcome.description.welcome_desc_1' | translate }}</p>
-        <p class="text-gray-400 text-base mt-2">{{ 'Pages.Welcome.description.welcome_desc_2' | translate }}</p>
-        <p class="text-gray-400 text-base mt-2">{{ 'Pages.Welcome.description.welcome_desc_3' | translate }}</p>
-        <div class="flex flex-row mt-2">
-            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2">
-                {{ 'Pages.Welcome.button.support' | translate }}
-            </button>
-            <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded">
-                {{ 'Pages.Welcome.button.status' | translate }}
-            </button>
+<section class="rounded h-auto p-8 flex flex-col" [ngClass.xs]="{'justify-center': true}"
+    style="background-image: url('../../../assets/welcome/banner-bg.jpg');">
+    <nav class="flex items-center justify-between flex-wrap w-full">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <a [routerLink]="[ '/welcome' ]"><img class="fill-current h-8 w-8 mr-2" width="54" height="54"
+                    src="../assets/logo-white.svg" alt="www.akatsukiapp.com"></a>
+            <span class="font-semibold text-xl tracking-tight">Akatsuki
+                Project</span>
         </div>
+        <div class="w-64 block flex-grow lg:flex lg:items-center lg:w-auto" fxHide.xs="true">
+            <div class="text-sm lg:flex-grow">
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2"
+                    [routerLink]="[ '/dashboard' ]">Sign In</button>
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2">Sign
+                    Up</button>
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded">Community
+                    guidelines</button>
+            </div>
+            <div class="flex flex-row items-center">
+                <a href="https://www.discordapp.com" target="_blank" rel="noopener noreferrer"><span
+                        class="iconify text-3xl mr-3" data-icon="fa-brands:discord" data-inline="false"></span></a>
+                <a href="https://www.play.google.com" target="_blank" rel="noopener noreferrer"><span
+                        class="iconify text-3xl mr-3" data-icon="cib:google-play" data-inline="false"></span></a>
+            </div>
+        </div>
+    </nav>
+    <div class="flex flex-row mt-4 justify-between" [ngClass.xs]="{'flex-col': true, 'justify-center': true}">
+        <div class="flex flex-col w-1/2" [ngClass.xs]="{'w-full': true}">
+            <p class="text-white font-bold text-5xl">{{ 'Pages.Welcome.title.welcome' | translate }}</p>
+            <p class="text-gray-400 text-base mt-2">{{ 'Pages.Welcome.description.welcome_desc_1' | translate }}</p>
+            <p class="text-gray-400 text-base mt-2">{{ 'Pages.Welcome.description.welcome_desc_2' | translate }}</p>
+            <p class="text-gray-400 text-base mt-2">{{ 'Pages.Welcome.description.welcome_desc_3' | translate }}</p>
+            <div class="flex flex-row mt-2">
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2">
+                    {{ 'Pages.Welcome.button.support' | translate }}
+                </button>
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded">
+                    {{ 'Pages.Welcome.button.status' | translate }}
+                </button>
+            </div>
+        </div>
+        <img src="../../../assets/welcome/app_mobile.svg" alt="www.akatsukiapp.com" width="512" height="512"
+            [ngClass.xs]="{'mt-4': true, 'justify-center': true, 'w-full': true}">
     </div>
-    <img src="../../../assets/welcome/app_mobile.svg" alt="www.akatsukiapp.com" width="400" height="400"
-        [ngClass.xs]="{'mt-4': true, 'justify-center': true, 'w-full': true}">
+</section>
+<div class="container mt-4" [ngClass.xs]="{'text-center': true, 'w-full': true}">
+    <h1 class="text-white font-bold text-4xl">Platform Status</h1>
+</div>
+<section class="container flex mt-4 justify-center w-full" [ngClass.xs]="{'flex-col': true, 'px-4': true}">
+    <div class="flex flex-col p-6  items-center">
+        <span class="iconify text-6xl" data-icon="fa-solid:users" data-inline="false"></span>
+        <h1 class="mt-2 text-white text-2xl font-light">
+            0 users
+        </h1>
+    </div>
+    <div class="flex flex-col p-6  items-center">
+        <span class="iconify text-6xl" data-icon="ant-design:shop-filled" data-inline="false"></span>
+        <h1 class="mt-2 text-white text-2xl font-light">
+            0 products
+        </h1>
+    </div>
+    <div class="flex flex-col p-6  items-center">
+        <span class="iconify text-6xl" data-icon="ic:outline-tablet-android" data-inline="false"></span>
+        <h1 class="mt-2 text-white text-2xl font-light">
+            0 downloads (App)
+        </h1>
+    </div>
+    <div class="flex flex-col p-6  items-center">
+        <span class="iconify text-6xl" data-icon="bx:bx-chip" data-inline="false"></span>
+        <h1 class="mt-2 text-green-500 text-2xl font-light">
+            Servers Uptime
+        </h1>
+    </div>
 </section>
 <div class="container mt-4" [ngClass.xs]="{'text-center': true, 'w-full': true}">
     <h1 class="text-white font-bold text-4xl">{{ 'Pages.Welcome.title.features' | translate }}</h1>
