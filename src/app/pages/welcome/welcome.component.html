@@ -10,10 +10,12 @@
         <div class="w-64 block flex-grow lg:flex lg:items-center lg:w-auto" fxHide.xs="true">
             <div class="text-sm lg:flex-grow">
                 <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2"
-                    [routerLink]="[ '/dashboard' ]">Sign In</button>
-                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2">Sign
+                    [routerLink]="[ '/auth/sign-in' ]">Sign In</button>
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded mr-2"
+                    [routerLink]="[ '/auth/sign-up' ]">Sign
                     Up</button>
-                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded">Community
+                <button class="bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded"
+                    [routerLink]="[ '/auth/guidelines' ]">Community
                     guidelines</button>
             </div>
             <div class="flex flex-row items-center">

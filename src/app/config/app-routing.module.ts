@@ -20,11 +20,11 @@ const routes: Routes = [
     },
   },
   {
-    path: 'dashboard',
+    path: 'marketplace',
     // canActivate: [AuthGuard],
     loadChildren: () =>
-      import('../pages/dashboard/dashboard.module').then(
-        m => m.DashboardModule,
+      import('../pages/marketplace/marketplace.module').then(
+        m => m.MarketplaceModule,
       ),
     data: {
       preload: false,
